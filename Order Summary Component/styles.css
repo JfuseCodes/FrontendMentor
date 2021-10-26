@@ -1,46 +1,128 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700;900&display=swap');
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box; margin: 0; padding: 0;
   font-family: 'Red Hat Display', sans-serif;
  }
+
 #body-p{
   font-size:16px;
 }
 
-#plan-container{
-  border:2px solid blue;
-  margin:auto;
+.payment-btn{
+  background-color:hsl(245, 75%, 52%);
+  border:1px solid hsl(245, 75%, 52%);
+  color: #FFFFFF;
+}
+.cancel-btn{
+  color:hsl(223, 47%, 23%)
 }
 
-#btns-container{
-  border:2px solid green;
-  margin:auto;
-}
-/*adding resposiveness for mobile design*/
+/* Media Queries for mobile design */
 @media only screen and (max-width:375px){
   html{
+    background-image: url("images/pattern-background-mobile.svg"), linear-gradient(hsl(225,100%,94%),hsl(225,100%,94%));
+    background-repeat: no-repeat;
+  }
+  #body{
 
+  height:736px;
 
+  }
+  #main{
+    background-color:white;
+    width:340px;
+    position:relative;
+    margin: auto;
+    margin-top:69px;
+    border-radius:16px;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  #banner-container{
+    width:340px;
+    margin:auto;
   }
   #banner-img{
     width:100%;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
   }
-  #main{
-    text-align:center;
+  #heading-container{
+    padding-top:20px;
+    padding-bottom:20px;
+    font-size:16px;
+    font-weight:  900;
+
+  }
+  #body-pContainer{
+    color: hsl(224, 23%, 55%);
+    padding-left:34px;
+    padding-right:34px;
+    padding-bottom:18px;
+    weight:400;
+    text-align: center;
+
+  }
+  #plan-container{
+    border:2px solid hsl(225, 100%, 98%);
+    background-color:hsl(225, 100%, 98%);
+    border-radius:10px;
+    margin-left:23px;
+    margin-right:23px;
     display:flex;
-    justify-content: center;
-    flex-direction: column;
-
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:16px;
+  }
+  #music-imgContainer,#plan-para,#change-link{
+    padding-top:13px;
+    padding-bottom:13px;
+  }
+  #music-imgContainer{
+    padding-left:17px;
+    padding-right:17px;
+  }
+  #plan-para{
+    padding-right:50px;
+  }
+  #change-link{
+    padding-right:16px;
+    font-size:12px;
+    font-weight:700;
+    color:hsl(245, 75%, 52%);
+  }
+  #plan-text{
+    font-weight:700;
+    font-size:14px;
+    text-align: left;
+  }
+  #price-tag{
+    color:hsl(224, 23%, 55%);
+    font-size:14px;
+  }
+  #paymentBtn-container{
+    margin-bottom:25px;
+  }
+  .payment-btn{
+    height:48px;
+    border-radius:10px;
+    width:295px;
+    font-weight:900;
+    font-size:14px;
+  }
+  #cancelBtn-container{
+    margin-bottom:25px;
+  }
+  .cancel-btn{
+    border:2px solid white;
+    background-color:white;
+    color:hsl(224, 23%, 55%);
+    font-weight:700;
+    font-size:14px;
   }
 }
 
-@media only screen and (orientation: landscape) {
-  #html{
-    background-color:lightblue;
-  }
-}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }

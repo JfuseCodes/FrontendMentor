@@ -10,36 +10,43 @@
 
 </head>
 <body id='body'>
-  <header id='banner-container'>
-    <img id='banner-img'src="images/illustration-hero.svg" alt="">
-  </header>
+
   <main id='main'>
+    <header id='banner-container'>
+      <img id='banner-img'src="images/illustration-hero.svg" alt="">
+    </header>
     <div id='heading-container'>
-      <p id='heading'>Order Summary<p>
+      <h3 id='heading'>Order Summary<p>
     </div>
-    <div id='body-p'>
-      You can now listen to millions of songs, audiobooks, and podcasts on any
-      device anywhere you like!
+    <div id='body-pContainer'>
+      <div id='body-p'>
+        You can now listen to millions of songs, audiobooks, and podcasts on any
+        device anywhere you like!
+      </div>
     </div>
     <div id='plan-container'>
-      <img src="images/icon-music.svg" alt="">
-      Annual Plan
-      $59.99/year
-      <a href='#'>Change</a>
+      <div id='music-imgContainer'>
+        <img src="images/icon-music.svg" alt="">
+      </div>
+      <div id='plan-para'>
+      <p id='plan-text'>Annual Plan</p>
+      <p id='price-tag'>$59.99/year</p>
+      </div>
+      <a id='change-link'href='#'>Change</a>
     </div>
     <div id='btns-container'>
       <div id='paymentBtn-container'>
         <button class='payment-btn btn'>Proceed to Payment</button>
       </div>
-      <div>
-        <button class='payment-btn btn'>Cancel Order</button>
+      <div id='cancelBtn-container'>
+        <button class='cancel-btn btn'>Cancel Order</button>
       </div>
     </div>
   </main>
   <footer>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://github.com/JfuseCodes/JfuseCodes">JfuseCodes</a>.
     </div>
   </footer>
 </body>
