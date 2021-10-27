@@ -12,13 +12,23 @@
   background-color:hsl(245, 75%, 52%);
   border:1px solid hsl(245, 75%, 52%);
   color: #FFFFFF;
+  cursor: pointer;
+
+}
+.payment-btn:hover{
+  cursor:pointer;
+  transform:translateY(-2.5px);
 }
 .cancel-btn{
+
   color:hsl(223, 47%, 23%)
+}
+.cancel-btn{
+
 }
 
 /* Media Queries for mobile design */
-@media only screen and (max-width:375px){
+@media only screen and (max-width:414px){
   html{
     background-image: url("images/pattern-background-mobile.svg"), linear-gradient(hsl(225,100%,94%),hsl(225,100%,94%));
     background-repeat: no-repeat;
@@ -123,6 +133,120 @@
   }
 }
 
+/* bigger screens Desktops and tablets */
+@media only screen and (min-width:799px) and (max-width:1441px){
+  html{
+    background-image: url("images/pattern-background-desktop.svg"), linear-gradient(hsl(225,100%,94%),hsl(225,100%,94%));
+    background-repeat: no-repeat;
+    height:100vh;
+  }
+   #main{
+    background-color:white;
+    width: 31.25vw;
+    position:relative;
+    margin:  auto;
+    margin-top:25vh;
+    border-radius:16px;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+  }
 
-.attribution { font-size: 11px; text-align: center; }
+   #banner-container{
+    width:100%;
+    margin:auto;
+  }
+  #banner-img{
+    width:100%;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+
+  #heading-container{
+    padding-top:3vh;
+    padding-bottom:1.2vw;
+    font-size:1em;
+    font-weight: 900;
+  }
+
+  #body-pContainer{
+    color: hsl(224, 23%, 55%);
+    padding-left:2.36vw;
+    padding-right:2.36vw;
+    padding-bottom:2vw;
+    text-align: center;
+  }
+  #body-p{
+    font-size: .77em;
+  }
+  #plan-container{
+    border:2px solid hsl(225, 100%, 98%);
+    background-color:hsl(225, 100%, 98%);
+    border-radius:10px;
+    margin-left:3.47vw;
+    margin-right:3.47vw;
+    display:flex;
+    align-items: center;
+    margin-bottom:2.22vh;
+  }
+
+  #music-imgContainer,#plan-para,#change-link{
+    padding-top:1.52vw;
+    padding-bottom:1.52vw;
+  }
+  #music-imgContainer{
+    padding-left:1.38vw;
+    padding-right:1.38vw;
+  }
+  #music-logo{
+    height:2em;
+    width:2.5em;
+  }
+  #plan-para{
+    padding-right:2.5vw;
+  }
+  #change-link{
+    font-size:.7em;
+    font-weight:700;
+    color:hsl(245, 75%, 52%);
+  }
+  #plan-text{
+    font-weight:700;
+    font-size:.7em;
+    text-align: left;
+  }
+  #price-tag{
+    color:hsl(224, 23%, 55%);
+    font-size:.7em;
+  }
+
+  #paymentBtn-container{
+    margin-bottom:25px;
+    margin-left:3.47vw;
+    margin-right:3.47vw;
+  }
+  .payment-btn{
+    color:white;
+    padding-top:1.18vw;
+    padding-bottom:1.18vw;
+    border-radius:10px;
+    width:24.3vw;
+    font-weight:900;
+    font-size:.7em;
+    box-shadow:0 10px 30px -1em hsl(245, 75%, 52%);
+  }
+  #cancelBtn-container{
+    margin-bottom:25px;
+  }
+  .cancel-btn{
+    border:2px solid white;
+    background-color:white;
+    color:hsl(224, 23%, 55%);
+    font-weight:700;
+    font-size:.7em;
+
+  }
+}
+
+.attribution { margin-top:75px; font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
