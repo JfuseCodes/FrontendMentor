@@ -21,6 +21,7 @@ My biggest challenge was getting a better grasp of media queries and trying to g
 
 ## USEFUL RESOURCES:
 These are the websites i used that proved to be very helpful in the development of this card:
+
   -https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries - very informative
 
   -https://www.google.com/search?client=safari&rls=en&q=w3+media+queries&ie=UTF-8&oe=UTF-8 - a visual explanation of media queries with a hands on experience
