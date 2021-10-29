@@ -7,10 +7,11 @@ or a service.Usually it is the precursor to a form requiring payment information
 
 ## TECHNOLOGIES USED:
 
-HTML:
+<b>HTML:</b>
 
  -Semantic HTML Markup
-CSS:
+ 
+<b>CSS:</b>
 
  -Custom properties
  
