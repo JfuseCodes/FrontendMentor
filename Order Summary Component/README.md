@@ -6,11 +6,16 @@ This is a simple project that displays what a user would view if they plan to pu
 or a service.Usually it is the precursor to a form requiring payment information.
 
 ## TECHNOLOGIES USED:
+
 HTML:
+
  -Semantic HTML Markup
 CSS:
+
  -Custom properties
+ 
  -Flexbox
+ 
  -Mobile-first workflow
 
 ## IMAGES:
