@@ -20,8 +20,8 @@ Another simple project used for marketing whose main point is showing numbers or
 
 
 ## IMAGES:
-![](/design/stats mobile design.jpg)
-![](/design/stats mobile design.jpg)
+![](./stats mobile design.jpg)
+![](./design/stats mobile design.jpg)
 
 ## CHALLENGES:
 Besides more media queries and making the project responsive to many different
