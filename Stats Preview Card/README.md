@@ -21,8 +21,8 @@ Another simple project used for marketing whose main point is showing numbers or
 
 ## IMAGES:
 
-<img src="https://github.com/JfuseCodes/FrontendMentor/blob/main/Stats%20Preview%20Card/stats-mobile-design.jpg" width="400" height="790">
-<img src="https://github.com/JfuseCodes/FrontendMentor/blob/main/Stats%20Preview%20Card/stats-desktop-design.png"width="400" height="790">
+<img src="https://github.com/JfuseCodes/FrontendMentor/blob/main/Stats%20Preview%20Card/stats-mobile-design.jpg" width="600" height="600">
+<img src="https://github.com/JfuseCodes/FrontendMentor/blob/main/Stats%20Preview%20Card/stats-desktop-design.png"width="600" height="600">
 
 
 ## CHALLENGES:
