@@ -21,8 +21,8 @@ Another simple project used for marketing whose main point is showing numbers or
 
 ## IMAGES:
 
-![](./stats-mobile-design.jpg)
-![](./stats-desktop-design.jpg)
+![](./stats-mobile-design.jpg = 250x250)
+![](./stats-desktop-design.jpg = 250x250)
 
 
 ## CHALLENGES:
