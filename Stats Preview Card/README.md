@@ -8,7 +8,7 @@ Another simple project used for marketing whose main point is showing numbers or
 
 <b>HTML:</b>
 
- -Semantic HTML for Markup
+ -Semantic HTML Markup
 
 <b>CSS:</b>
 
