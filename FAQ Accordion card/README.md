@@ -26,7 +26,7 @@ A responsive card containing Frequently Asked Questions. When the question or ar
 
 ## IMAGES:
 
-<img src="https://github.com/JfuseCodes/FrontendMentor/blob/main/FAQ%20Accordion%20card/accordion-mobile-design.png" width="600" height="600">
+<img src="https://github.com/JfuseCodes/FrontendMentor/blob/main/FAQ%20Accordion%20card/accordion-mobile-design.png" width="240" height="360">
 <img src="https://github.com/JfuseCodes/FrontendMentor/blob/main/FAQ%20Accordion%20card/accordion-tablet-design.png"width="600" height="600">
 <img src="https://github.com/JfuseCodes/FrontendMentor/blob/main/FAQ%20Accordion%20card/accordion-desktop-design.png"width="600" height="600">
 
