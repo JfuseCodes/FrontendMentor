@@ -57,26 +57,20 @@ My biggest challenge for this project came with getting the numbers right within
 ## USEFUL RESOURCES:
 Here are obstacles i overcame along with the articles and/or websites i used to help me not only learn more but gain muscle memory for my problem solving skills:
 
-  -https://developer.mozilla.org/en-US/docs/Web/API/Event/currentTarget
-
+  https://developer.mozilla.org/en-US/docs/Web/API/Event/currentTarget
    -This article about currentTarget in DOM manipulation was useful for the toggling of buttons and also allowing for only button to toggle at a time.
 
-  -https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event
-
+  https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event
    -an article about the "change" event which provided me the knowledge i needed for the interactiveness i was seeking in terms of the results updating on the change of input values.
 
-  -https://css-tricks.com/snippets/css/complete-guide-grid/
-
+  https://css-tricks.com/snippets/css/complete-guide-grid/
     - a tutorial guide for the grid CSS layout system that i had to take retake mess around with as a refresher
 
-  -https://getbootstrap.com/docs/5.1/forms/validation/
-
+  https://getbootstrap.com/docs/5.1/forms/validation/
     - bootstrap validation to make sure that the right values are submitted for the desired results.
 
-  -https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
-
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
    -an article on CSS VARIABLES: this is my first time that i incorporated css variables in to a project.
-
    -It really helped cleanup my code by not having so much numeric values as far as the hex codes and RGB color schemes go.
 
 ## AUTHOR:
