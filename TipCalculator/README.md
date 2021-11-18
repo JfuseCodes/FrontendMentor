@@ -33,7 +33,7 @@ A responsive tip calculator with validation.
 
 <img src="https://github.com/JfuseCodes/FrontendMentor/blob/main/TipCalculator/design/mobile-design1.png" width="375" height="768">
 <img src="https://github.com/JfuseCodes/FrontendMentor/blob/main/TipCalculator/design/mobile-design2.png" width="375" height="768">
-<img src="https://github.com/JfuseCodes/FrontendMentor/blob/main/TipCalculator/design/desktop-invalid-design.png" width="649" height="506">
+<img src="https://github.com/JfuseCodes/FrontendMentor/blob/main/TipCalculator/design/desktop-invalid-design.png" width="649" height="510">
 <img src="https://github.com/JfuseCodes/FrontendMentor/blob/main/TipCalculator/design/desktop-valid-design.png" width="649" height="506">
 
 
