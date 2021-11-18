@@ -1,112 +1,67 @@
-# Frontend Mentor - Tip calculator app solution
+# TIP CALCULATOR
 
-This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Table of contents
+## OVERVIEW
+A responsive tip calculator with validation.
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+## TECHNOLOGIES USED:
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+<b>HTML:</b>
 
-## Overview
+ -Semantic HTML Markup
 
-### The challenge
+<b>CSS:</b>
+ -Bootstrap
 
-Users should be able to:
+ -Custom properties( filter )
 
-- View the optimal layout for the app depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Calculate the correct tip and total cost of the bill per person
+ -CSS variables
 
-### Screenshot
+ -Flexbox
 
-![](./screenshot.jpg)
+ -Grid
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+ -Mobile-first workflow with bootstrap responsiveness all the way too desktop screens
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+<b>Javascript:</b>
+-Bootstrap validation classes
+-DOM Manipulation
+-Event Listeners
+-Program Flow
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
+## IMAGES:
 
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+<img src="https://github.com/JfuseCodes/FrontendMentor/blob/main/TipCalculator/design/mobile-design.png1" width="375" height="768">
+<img src="https://github.com/JfuseCodes/FrontendMentor/blob/main/TipCalculator/design/mobile-design2.png" width="375" height="768">
+<img src="https://github.com/JfuseCodes/FrontendMentor/blob/main/TipCalculator/design/desktop-invalid-design.png" width="649" height="506">
+<img src="https://github.com/JfuseCodes/FrontendMentor/blob/main/TipCalculator/design/desktop-valid-design.png" width="649" height="506">
 
-### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+## CHALLENGES:
+My biggest challenge for this project came with getting the numbers right within javascript. Here are the obstacles i came across while working on this project:
 
-## My process
+1.In general I had a hard time storing the values of each section
+  -Ex: the input numbers within bill, or the clicked button of the tip %
 
-### Built with
+2.In addition to the storage of values, my next obstacle was making the resulting tip amount and totals more interactive
+  -with changes to the inputs, the results change based on what inputs were changed. Afterall that is the magic that javascript brings.
+ -Ex: if i already have my results, with the change from a button % i can simply type in my desired custom tip amount, and automatically the results will change without having to update or re-input any other values.
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+## USEFUL RESOURCES:
+Here are obstacles i overcame along with the articles and/or websites i used to help me not only learn more but gain muscle memory for my problem solving skills:
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+  -https://developer.mozilla.org/en-US/docs/Web/API/Event/currentTarget
+   -This article about currentTarget in DOM manipulation was useful for the toggling of buttons and also allowing for only button to toggle at a time.
+  -https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event
+   -an article about the "change" event which provided me the knowledge i needed for the interactiveness i was seeking in terms of the results updating on the change of input values.
+  -https://css-tricks.com/snippets/css/complete-guide-grid/
+    - a tutorial guide for the grid CSS layout system that i had to take retake mess around with as a refresher
+  -https://getbootstrap.com/docs/5.1/forms/validation/
+    - bootstrap validation to make sure that the right values are submitted for the desired results.
 
-### What I learned
+  -https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+   -an article on CSS VARIABLES: this is my first time that i incorporated css variables in to a project.
+   -It really helped cleanup my code by not having so much numeric values as far as the hex codes and RGB color schemes go.
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
-## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+## AUTHOR:
+ -Twitter - [@JfuseCodes](https://www.twitter.com/JfuseCodes)

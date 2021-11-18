@@ -13,75 +13,72 @@
       href="./images/favicon-32x32.png"/>
     <title>Frontend Mentor | Tip calculator app</title>
     <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
+
     </style>
   </head>
-  <body id='body' class=''>
+  <body id='body' class='body'>
     <header id='header' class='container p-5 header-container'>
-      <div class='text-center'>
-        <img class='img-fluid'src="images/logo.svg" alt="">
+      <div id='header-img-container text-center'>
+        <img id='mobile-header' class='text-center' src="images/logo.svg" alt="">
       </div>
     </header>
     <main id='main' class='container'>
+      <div id='desktop-wrapper'>
       <div class='my-3'>
-        <div id='bill-heading'>Bill</div>
-
+        <div id='bill-heading' class='heading mb-2'>Bill</div>
         <div id='bill-input-container' class="input-group mb-3">
-          <span class="input-group-text"><img id='dollar-img'src="images/icon-dollar.svg"></span>
-          <input placeholder='1'id='bill-input' type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
-        </div>
-
-      </div>
-
-      <div id='tip-selection'>
-        <div id='tip-heading'>Select Tip %</div>
-        <div id='tip-btn-container'>
-          <button class='btn' value='5'>5%</button>
-          <button class='btn' value='10'>10%</button>
-          <button class='btn' type="button" name="button" value='15'>15%</button>
-          <button class='btn' type="button" name="button" value='25'>25%</button>
-          <button class='btn'  type="button" name="button" value='50'>50%</button>
-          <input placeholder='Custom'  id='custom-input' type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+          <span class="input-group-text input"><img id='dollar-img'src="images/icon-dollar.svg"></span>
+          <input placeholder='1'id='bill-input' type="text" class="form-control input" aria-label="Dollar amount (with dot and two decimal places)">
         </div>
       </div>
 
+      <div id='tip-selection' class='mb-4'>
+        <div id='tip-heading' class='heading mb-2'>Select Tip %</div>
+        <div id='tip-btn-container' class='tip-wrapper'>
+          <button class='btn five' value='5'>5%</button>
+          <button class='btn ten' value='10'>10%</button>
+          <button class='btn fifteen' type="button" name="button" value='15'>15%</button>
+          <button class='btn twenty5' type="button" name="button" value='25'>25%</button>
+          <button class='btn fifty'  type="button" name="button" value='50'>50%</button>
+          <input placeholder='Custom'  id='custom-input' type="text" class="form-control custom" aria-label="Dollar amount (with dot and two decimal places)">
+        </div>
+      </div>
 
-      <div>
-        <div>Number of People</div><div id='error-message'></div>
+
+      <div class='mb-4'>
+        <div class='heading mb-2'>Number of People</div><div id='error-message'></div>
         <div id='people-input-container' class="input-group mb-3">
-          <span class="input-group-text"><img src="images/icon-person.svg"><input value="1"placeholder='1'id='people-amount' type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)"></span>
+          <span class="input-group-text "><img src="images/icon-person.svg"></span>
+          <input value="1"placeholder='1'id='people-amount' type="text" class="form-control input" aria-label="Dollar amount (with dot and two decimal places)">
         </div>
       </div>
+      </div>
+      <div id='result' class='container'>
+        <div id='individual-tip-per-person-container' class='tip-container mb-4'>
 
-
-
-      <div id='result'>
-        <div id='individual-tip-per-person-container'>
-          <div id='individual-tip-heading'>Tip Amount / person</div>
-          <div id='tip-person-result'></div>
+          <div class='container tip-text-container'>
+            <div id='individual-tip-heading'>Tip Amount </div>
+            <div id='person'>/ person</div>
+          </div>
+          <div id='tip-person-result' class='tip-result text-center'></div>
         </div>
 
-        <div id='total-tip-per-person-container'>
-          <div id='total-tip-heading'>Total / person</div>
-          <div id='total-tip-person-result'></div>
+        <div id='total-tip-per-person-container' class='tip-container mb-4'>
+          <div class='container tip-text-container'>
+            <div id='total-tip-heading' class='col-8'>Total </div>
+            <div id='person'>/ person</div>
+          </div>
+          <div id='total-tip-person-result' class='tip-result text-center'></div>
         </div>
-        <div>
-          <button id='reset-btn'>RESET</button>
+
+        <div class='reset-btn-container container text-center'>
+          <button id='reset-btn' class='btn reset-btn mb-2 col-12'>RESET</button>
         </div>
       </div>
     </main>
     <footer id='footer'>
       <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="https://twitter.com/jfusecodes">JfuseCodes</a>.
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://twitter.com/jfusecodes">JfuseCodes</a>.
       </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

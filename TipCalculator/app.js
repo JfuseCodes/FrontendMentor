@@ -43,10 +43,21 @@ const checkActiveBtn = () => {
     }
   }
 };
+const billWarning = () => {
+  if(billInput.value < 0){
+    billInput.classList.add('is-invalid');
+    soloTipPersonResult.textContent = `$${roundDec(0)}`;
+    tipPersonResult.textContent = `$${roundDec(0)}`;
+  }
+  else{
+    billInput.classList.remove('is-invalid');
+
+  }
+}
 const errorWarning = () => {
   if(peopleInput.value <= 0){
     peopleInput.classList.add('is-invalid');
-    errorMessage.style.color = 'red';
+    errorMessage.style.focus = 'rgb(218,55,73)';
     errorMessage.textContent = `Cant be ${peopleInputValue(peopleInput)}`;
     errorMessage.style.color = 'rgb(218,55,73)';
     soloTipPersonResult.textContent = `$${roundDec(0)}`;
@@ -54,10 +65,20 @@ const errorWarning = () => {
   }
   else{
     peopleInput.classList.remove('is-invalid');
+    peopleInput.classList.add('is-valid');
     errorMessage.textContent = '';
   }
 }
-
+const customInputWarning = () => {
+  if(customInput.value < 0){
+    customInput.classList.add('is-invalid');
+    soloTipPersonResult.textContent = `$${roundDec(0)}`;
+    tipPersonResult.textContent = `$${roundDec(0)}`;
+  }
+  else{
+    customInput.classList.remove('is-invalid');
+  }
+}
 const noTipBill = () => {
   let totalAmount = billInputValue(billInput),
     personAmount = +peopleInput.value,
@@ -65,6 +86,7 @@ const noTipBill = () => {
     totalBill = +calculateTotalTipPerPerson(totalAmount, personAmount);
   soloTipPersonResult.textContent = `$${roundDec(soloTip)}`
   tipPersonResult.textContent = `$${roundDec(totalBill)}`;
+
   // soloTipPersonResult.textContent = `${totalAmount}`;
   return totalBill;
 };
@@ -105,18 +127,31 @@ const billInputUpdate = () => {
     else if(customInput.value > 0){
       removeActiveBtn();
       billWithCustomTip();
+    }
+    else if(customInput.value < 0){
+      customInput.classList.add('is-invalid');
     };
     errorWarning();
+    billWarning();
+    customInputWarning();
   });
 };
 const tipButtonUpdate = () => {
   tipButtons.forEach( btn => {
     btn.addEventListener('click', e => {
-      customInput.value = '';
       toggleClass(e);
+      customInput.value = '';
+      customInput.classList.remove('is-invalid');
+      if(billInput.value < 0){
+        billWarning();
+      }
+      else{
+
       billWithBtnTip();
       if(peopleInput.value <= 0) showError();
       if(peopleInput.value >0)removeError();
+
+      }
     })
   })
 };
@@ -128,6 +163,8 @@ const customInputUpdate = () => {
       billWithCustomTip();
     }
      errorWarning();
+     billWarning();
+     customInputWarning();
   });
 };
 const peopleNumUpdate = () => {
@@ -143,6 +180,7 @@ const peopleNumUpdate = () => {
       billWithCustomTip();
     }
     errorWarning();
+    billWarning();
   })
 }
 
@@ -151,6 +189,7 @@ const updateTotal = () => {
   tipButtonUpdate();
   customInputUpdate();
   peopleNumUpdate();
+
 }
 updateTotal();
 resetBtn.addEventListener("click", (e) => {
