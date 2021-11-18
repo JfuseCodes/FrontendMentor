@@ -67,16 +67,16 @@ Here are obstacles i overcame along with the articles and/or websites i used to 
 
   https://css-tricks.com/snippets/css/complete-guide-grid/
 
-    -a tutorial guide for the grid CSS layout system that i had to take retake mess around with as a refresher
+  -a tutorial guide for the grid CSS layout system that i had to take retake mess around with as a refresher
 
   https://getbootstrap.com/docs/5.1/forms/validation/
 
-    -bootstrap validation to make sure that the right values are submitted for the desired results.
+  -bootstrap validation to make sure that the right values are submitted for the desired results.
 
   https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 
    -an article on CSS VARIABLES: this is my first time that i incorporated css variables in to a project.
-   
+
    -It really helped cleanup my code by not having so much numeric values as far as the hex codes and RGB color schemes go.
 
 ## AUTHOR:
