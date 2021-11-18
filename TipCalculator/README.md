@@ -45,11 +45,11 @@ A responsive tip calculator with validation.
 ## CHALLENGES:
 My biggest challenge for this project came with getting the numbers right within javascript. Here are the obstacles i came across while working on this project:
 
-1.In general I had a hard time storing the values of each section
+<b>1.</b>In general I had a hard time storing the values of each section
 
   -Ex: the input numbers within bill, or the clicked button of the tip %
 
-2.In addition to the storage of values, my next obstacle was making the resulting tip amount and totals more interactive
+<b>2.</b>In addition to the storage of values, my next obstacle was making the resulting tip amount and totals more interactive
   -with changes to the inputs, the results change based on what inputs were changed. Afterall that is the magic that javascript brings.
 
  -Ex: if i already have my results, with the change from a button % i can simply type in my desired custom tip amount, and automatically the results will change without having to update or re-input any other values.
