@@ -354,11 +354,12 @@ input{
     font-size:.8rem;
   }
   .reset-btn-container{
-    width:12rem;
+    border:2px solid black;
+    /* width:13rem; */
     margin-top:6.5rem;
     margin-left:1rem;
-    display:flex;
-    justify-content: center;
+    /* display:flex;
+    justify-content: center; */
   }
 
   .tip-container{
