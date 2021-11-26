@@ -1,0 +1,147 @@
+@font-face {
+  font-family: 'Josefin Sans', sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap"); }
+html {
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif !important; }
+
+body {
+  background: linear-gradient(135deg, white, #fff5f5); }
+  body header img {
+    padding: 2.5rem; }
+  body .mobile-img {
+    width: 100%; }
+  body .desktop-img,
+  body .pending-info-para-desktop {
+    display: none; }
+  body .comingsoon-container {
+    padding-top: 4rem; }
+  body .comingsoon-container > div {
+    line-height: 3.5rem; }
+  body .comingsoon1, body .comingsoon2, body .comingsoon3 {
+    font-size: 3rem;
+    text-transform: capitalize;
+    letter-spacing: .5rem; }
+  body .comingsoon1 {
+    font-weight: 200;
+    color: #ce9797; }
+  body .comingsoon2, body .comingsoon3 {
+    font-weight: 600;
+    color: #413a3a; }
+  body .pending-info-container {
+    padding-top: 1.2rem;
+    padding-bottom: 1.5rem;
+    color: #ce9797;
+    font-weight: 600;
+    letter-spacing: .02rem; }
+  body .pending-info-para-mobile {
+    width: 94%;
+    text-align: center;
+    font-size: .8rem;
+    line-height: 1.3rem; }
+  body .email-container {
+    width: 94%;
+    padding-top: 1rem;
+    padding-bottom: 5rem; }
+  body .email-input {
+    height: 3rem;
+    border-radius: 26px;
+    border-color: #ce9797;
+    background-color: #fff5f5; }
+  body .error-icon-container {
+    position: relative;
+    bottom: 2.3rem; }
+  body .error-icon {
+    display: inline-block;
+    position: absolute;
+    left: 82%; }
+  body .email-btn-container {
+    position: relative;
+    bottom: 3rem; }
+  body .email-btn {
+    position: absolute;
+    background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+    border-radius: 26px;
+    border: none;
+    width: 4rem;
+    height: 3rem;
+    right: 0.1%; }
+  body .email-btn > img {
+    width: auto; }
+  body .email-btn:hover {
+    border-color: #fbd7d8;
+    background: #fbd7d8; }
+  body .error-message-container {
+    width: 75%; }
+  body .error-message {
+    color: #f96262; }
+  body .show-hidden-icon {
+    display: block; }
+  body .hide-icon {
+    display: none; }
+  body footer {
+    padding: 1rem;
+    font-size: .5rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-around; }
+
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 16px; }
+    html .body {
+      background: url("images/bg-pattern-desktop.svg") repeat;
+      display: grid;
+      grid-template-columns: 1.5fr .5fr;
+      grid-template-rows: .25fr 1fr .1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px; }
+    html body .desktop-img, html body .pending-info-para-desktop {
+      display: block; }
+    html body .mobile-img, html body .pending-info-para-mobile {
+      display: none; }
+    html body .div1 {
+      grid-area: 1 / 1 / 2 / 2; }
+    html body .div2 {
+      grid-area: 1 / 2 / 4 / 3; }
+    html body .div3 {
+      padding-left: 8rem; }
+    html body .header {
+      padding-left: 5.9rem; }
+    html body .main-content {
+      width: 28rem; }
+    html body .comingsoon1, html body .comingsoon2, html body .comingsoon3 {
+      padding-top: .5rem;
+      letter-spacing: .9rem;
+      font-size: 3.5rem;
+      text-align: left; }
+    html body .pending-info-para-desktop {
+      padding: 2rem 3rem 0 0;
+      font-weight: 350;
+      font-size: .8rem;
+      line-height: 1.6rem; }
+    html body .email-container {
+      position: relative;
+      width: 90%;
+      margin-right: 4rem; }
+    html body .email-input {
+      position: relative; }
+    html body .email-container {
+      padding-top: 3.5rem; }
+    html body .email-btn-container {
+      position: relative; }
+    html body .email-btn {
+      width: 5rem;
+      position: absolute; }
+    html body .error-icon-container {
+      position: absolute;
+      bottom: 8.9rem; }
+    html body .error-icon {
+      position: absolute;
+      left: 16rem; }
+    html body .error-message-container {
+      width: 75%; }
+    html body .error-message {
+      color: #f96262; } }
+
+/*# sourceMappingURL=main.css.map */

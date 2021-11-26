@@ -13,11 +13,6 @@ html{
   font-family: 'Space Mono', monospace!important;
   font-size:24px;
 }
-
-.input-group-text{
-  /* border:0px solid white; */
-  /* background-color:white; */
-}
 input{
   border:0px solid white;
 }
@@ -319,7 +314,6 @@ input{
     grid-row-gap: 25px;
   }
   #desktop-wrapper{
-    /* border:2px solid black; */
     padding-right:2rem;
 
 

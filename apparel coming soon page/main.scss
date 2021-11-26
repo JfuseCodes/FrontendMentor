@@ -1,0 +1,109 @@
+@font-face{
+  font-family: 'Josefin Sans', sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap")
+}
+$pri-desRed: hsl(0, 36%, 70%);
+$pri-softRed: hsl(0, 93%, 68%);
+$neut-darkGrRed: hsl(0, 6%, 24%);
+$submit-hover: rgb(251,215,216);
+$font-fam: 'Josefin Sans', sans-serif !important;
+
+//Gradients
+$gradientG1c1: hsl(0, 0%, 100%);
+$gradientG1c2: hsl(0, 100%, 98%);
+$gradientG2c1:hsl(0, 80%, 86%);
+$gradientG2c2:hsl(0, 74%, 74%);
+
+$pageGradient: linear-gradient(135deg, $gradientG1c1,$gradientG1c2);
+$emailGradient: linear-gradient(135deg, $gradientG2c1,$gradientG2c2);
+
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+html{ font-size: 16px; font-family: $font-fam;};
+body{
+  header{
+    img{ padding:2.5rem; };
+  }
+  .mobile-img{width:100%;}
+  .desktop-img,
+  .pending-info-para-desktop{display:none;}
+  .comingsoon-container{padding-top:4rem;}
+  .comingsoon-container > div{line-height: 3.5rem;}
+  .comingsoon1,.comingsoon2,.comingsoon3{ font-size:3rem; text-transform: capitalize; letter-spacing: .5rem; }
+  .comingsoon1{font-weight:200; color:$pri-desRed};
+  .comingsoon2,.comingsoon3{ font-weight:600;  color: $neut-darkGrRed }
+  .pending-info-container{
+    padding-top:1.2rem; padding-bottom:1.5rem;
+    color: $pri-desRed; font-weight: 600; letter-spacing: .02rem;
+  }
+  .pending-info-para-mobile{ width: 94%; text-align: center; font-size: .8rem; line-height: 1.3rem; }
+
+  .email-container{width: 94%; padding-top: 1rem; padding-bottom: 5rem; }
+  .email-input{height: 3rem; border-radius: 26px;
+    border-color: $pri-desRed; background-color: $gradientG1c2;
+  }
+  .error-icon-container{
+    position:relative; bottom:2.3rem;
+  }
+  .error-icon{ display:inline-block; position:absolute; left:82%;}
+
+
+  .email-btn-container{position: relative; bottom:3rem; }
+  .email-btn{
+    position: absolute; background: $emailGradient;
+    border-radius: 26px; border:none; width:4rem; height:3rem; right:0.1%;
+  }
+  .email-btn > img{ width:auto; }
+  .email-btn:hover{ border-color:$submit-hover; background:$submit-hover;}
+  .error-message-container{width:75%;}
+  .error-message{color:$pri-softRed;}
+  background: $pageGradient;
+  .show-hidden-icon{ display:block; }
+  .hide-icon{display:none;}
+  footer{
+    padding:1rem; font-size:.5rem;
+    font-weight:700; display:flex; justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: $xl){
+  html{
+    font-size: 16px;
+    .body{
+      background: url("images/bg-pattern-desktop.svg") repeat;
+      display: grid; grid-template-columns: 1.5fr .5fr;
+      grid-template-rows: .25fr 1fr .1fr;
+      grid-column-gap: 0px; grid-row-gap: 0px;
+    }
+    body{
+      .desktop-img,.pending-info-para-desktop{ display:block; }
+      .mobile-img,.pending-info-para-mobile{ display:none; }
+      .div1{ grid-area: 1 / 1 / 2 / 2; }
+      .div2 { grid-area: 1 / 2 / 4 / 3; }
+      .div3{ padding-left: 8rem;}
+      .header{ padding-left: 5.9rem; }
+      .main-content{ width: 28rem; }
+      .comingsoon1,.comingsoon2,.comingsoon3{
+        padding-top: .5rem; letter-spacing: .9rem;
+        font-size: 3.5rem; text-align: left;
+      }
+      .pending-info-para-desktop{ padding:2rem 3rem 0 0;
+        font-weight: 350; font-size: .8rem; line-height: 1.6rem;
+      }
+      .email-container{ position:relative; width:90%; margin-right:4rem; }
+      .email-input{ position:relative; }
+      .email-container{padding-top: 3.5rem;}
+      .email-btn-container{position: relative;}
+      .email-btn{ width:5rem; position: absolute; }
+      .error-icon-container{ position: absolute; bottom: 8.9rem;}
+      .error-icon{ position: absolute; left: 16rem;}
+      .error-message-container{width: 75%;}
+      .error-message{color: $pri-softRed;}
+    }
+  }
+}
