@@ -34,8 +34,8 @@ Responsive coming soon page with email validation- if an empty input or wrong em
 
 ## IMAGES:
 
-<img src="https://github.com/JfuseCodes/FrontendMentor/blob/main/apparel%coming%soon%page/design/apparel-mobile-design.png" width="375" height="768">
-<img src="https://github.com/JfuseCodes/FrontendMentor/blob/main/apparel%coming%soon%page/design/apparel-desktop-design.png" width="649" height="510">
+<img src="https://github.com/JfuseCodes/FrontendMentor/blob/main/apparel%20coming%20soon%20page/design/apparel-mobile-design.png" width="375" height="768">
+<img src="https://github.com/JfuseCodes/FrontendMentor/blob/main/apparel%20coming%20soon%20page/design/apparel-desktop-design.png" width="649" height="510">
 
 
 ## CHALLENGES:
