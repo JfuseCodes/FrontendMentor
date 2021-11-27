@@ -49,7 +49,9 @@ For learning sass i used the main documentation from its website. I mainly used 
    -The variables in sass begin with the $ symbol. I used them to make my scss code cleaner and to also remember better the primary colors better.
 
   https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+
   https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/email
+  
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 
    -These 3 articles allowed me to fully incorporate validation for the email input.
