@@ -4,7 +4,8 @@
 ## OVERVIEW
 Responsive coming soon page with email validation- if an empty input or wrong email is submitted than an error message will show. Otherwise the email will be approved with a thank you message.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/6ae25f74-c4b0-452b-86ed-e6269192ebfa/deploy-status)](https://app.netlify.com/sites/pendingapparel/deploys)
+The site is deployed on: https://pendingapparel.netlify.app
+
 
 
 ## TECHNOLOGIES USED:
