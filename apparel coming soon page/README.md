@@ -4,6 +4,9 @@
 ## OVERVIEW
 Responsive coming soon page with email validation- if an empty input or wrong email is submitted than an error message will show. Otherwise the email will be approved with a thank you message.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6ae25f74-c4b0-452b-86ed-e6269192ebfa/deploy-status)](https://app.netlify.com/sites/pendingapparel/deploys)
+
+
 ## TECHNOLOGIES USED:
 
 <b>HTML:</b>
@@ -51,7 +54,7 @@ For learning sass i used the main documentation from its website. I mainly used 
   https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
 
   https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/email
-  
+
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 
    -These 3 articles allowed me to fully incorporate validation for the email input.
