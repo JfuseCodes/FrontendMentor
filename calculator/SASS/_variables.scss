@@ -1,0 +1,88 @@
+$xs:0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+$font-size: 32px;
+
+//FIRST STEP: DECLARE CSS VARIABLES BY ASSIGNING TO CORRESPONDING SCSS VARIABLES
+
+//BACKGROUNDS
+$--theme-primaryBackground: --theme-primaryBackground;
+$--theme-toggleBackground: --theme-toggleBackground;
+$--theme-keypadBackground: --theme-keypadBackground;
+$--theme-screenBackground: --theme-screenBackground;
+//KEYS
+$--theme-delKeyBackground: --theme-delKeyBackground;
+$--theme-delKeyShadow: --theme-delKeyShadow;
+$--theme-toggleKeyBackground: --theme-toggleKeyBackground;
+$--theme-toggleKeyShadow: --theme-toggleKeyShadow;
+$--theme-keyBackground: --theme-keyBackground;
+$--theme-keyShadow: --theme-keyShadow;
+$--theme-equalKeyBackground: --theme-equalKeyBackground;
+$--theme-equalKeyShadow: --theme-equalKeyShadow;
+//TEXT
+$--theme-text1: --theme-text1;
+$--theme-text2: --theme-text2;
+$--theme-text3: --theme-text3;
+//STEP 2: THEME VARIABLE MAPS
+
+//THEME 1
+$theme-map-one:(
+  $--theme-primaryBackground: hsl(222, 26%, 31%),
+  $--theme-toggleBackground: hsl(223, 31%, 20%),
+  $--theme-keypadBackground: hsl(223,31%,20%),
+  $--theme-screenBackground: hsl(224, 36%, 15%),
+  $--theme-delKeyBackground: hsl(225, 21%, 49%),
+  $--theme-delKeyShadow: hsl(224,28%,35%),
+  $--theme-toggleKeyBackground: hsl(6,63%, 50%),
+  $--theme-toggleKeyShadow: hsl(6, 70%, 34%),
+  $--theme-equalKeyBackground: hsl(6,63%, 50%),
+  $--theme-equalKeyShadow: hsl(6, 70%, 34%),
+  $--theme-keyBackground: hsl(30, 25%, 89),
+  $--theme-keyShadow: hsl(28, 16%, 65%),
+  $--theme-text1: hsl(221,14%,31%),
+  $--theme-text2: hsl(0, 0, 100%)
+);
+
+//THEME 2
+$theme-map-two: (
+  $--theme-primaryBackground: hsl(0, 0%, 90%),
+  $--theme-toggleBackground: hsl(0, 5%, 81%),
+  $--theme-keypadBackground: hsl(0, 5%, 81%),
+  $--theme-screenBackground: hsl(0, 0%, 93%),
+
+  $--theme-delKeyBackground: hsl(185, 42%, 37%),
+  $--theme-delKeyShadow: hsl(185, 58%, 25%),
+  $--theme-toggleKeyBackground: hsl(25, 98%, 40%),
+  $--theme-toggleKeyShadow: hsl(25, 99%, 27%),
+  $--theme-equalKeyBackground: hsl(25, 98%, 40%),
+  $--theme-equalKeyShadow: hsl(25, 99%, 27%),
+  $--theme-keyBackground: hsl(45, 7%, 89%),
+  $--theme-keyShadow: hsl(35, 11%, 61%),
+
+  $--theme-text1: hsl(60, 10%, 19%),
+  $--theme-text2: hsl(0, 0, 100%)
+);
+
+//THEME 3
+$theme-map-three: (
+  $--theme-primaryBackground: hsl(268, 75%, 9%),
+  $--theme-toggleBackground: hsl(268, 71%, 12%),
+  $--theme-keypadBackground: hsl(268, 71%, 12%),
+  $--theme-screenBackground: hsl(268, 71%, 12%),
+
+  $--theme-delKeyBackground: hsl(281, 89%, 26%),
+  $--theme-delKeyShadow: hsl(285, 91%, 52%),
+  $--theme-toggleKeyBackground: hsl(176, 100%, 44%),
+  $--theme-toggleKeyShadow: hsl(177, 92%, 70%),
+  $--theme-equalKeyBackground: hsl(176, 100%, 44%),
+  $--theme-equalKeyShadow: hsl(177, 92%, 70%),
+  $--theme-keyBackground: hsl(268, 47%, 21%),
+  $--theme-keyShadow: hsl(290, 70%, 36%),
+
+  $--theme-text1: hsl(52, 100%, 62%),
+  $--theme-text2: hsl(198, 20%, 13%),
+  $--theme-text3: hsl(0, 0, 100%)
+);

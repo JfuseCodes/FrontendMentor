@@ -1,0 +1,72 @@
+/*
+Error: Invalid CSS after "...imaryBackground": expected ")", was ";)}"
+        on line 37 of /Users/JoshuaMendoza/JfuseCodes/FrontendMentor/calculator/SASS/app.scss
+
+32: }
+33: 
+34: 
+35: .one{
+36:   background-color: var(--theme-primaryBackground);
+37:   .header-container{background-color:var(--theme-primaryBackground;)}
+38:   .header-container, .display-container{color:var(--theme-text2)};
+39: }
+40: 
+41: .two{
+42:   background-color:var(--theme-primaryBackground);
+
+Backtrace:
+/Users/JoshuaMendoza/JfuseCodes/FrontendMentor/calculator/SASS/app.scss:37
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/lexer.rb:240:in `expected!'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:862:in `assert_tok'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:644:in `funcall'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:531:in `css_min_max'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:507:in `ident'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:295:in `unary_not'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:295:in `unary_div'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:295:in `unary_minus'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:295:in `unary_plus'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:272:in `times_div_or_mod'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:272:in `plus_or_minus'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:272:in `relational'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:272:in `eq_or_neq'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:272:in `and_expr'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:272:in `or_expr'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:481:in `space'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:422:in `interpolation'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:343:in `expr'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:853:in `assert_expr'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:68:in `parse'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1164:in `sass_script'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1002:in `value!'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:807:in `block in try_declaration'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1284:in `rethrow'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:825:in `try_declaration'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:743:in `declaration_or_ruleset'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:697:in `block_contents'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:758:in `declaration_or_ruleset'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in `ruleset'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:387:in `run'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/bin/sass:23:in `load'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...imaryBackground\": expected \")\", was \";)}\"\A         on line 37 of /Users/JoshuaMendoza/JfuseCodes/FrontendMentor/calculator/SASS/app.scss\A \A 32: }\A 33: \A 34: \A 35: .one{\A 36:   background-color: var(--theme-primaryBackground);\A 37:   .header-container{background-color:var(--theme-primaryBackground;)}\A 38:   .header-container, .display-container{color:var(--theme-text2)};\A 39: }\A 40: \A 41: .two{\A 42:   background-color:var(--theme-primaryBackground);"; }

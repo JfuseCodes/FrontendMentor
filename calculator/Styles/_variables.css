@@ -1,0 +1,66 @@
+/*
+Error: Invalid CSS after "...e-keyBackground": expected ")", was ": hsl(225, 21%,..."
+        on line 35 of /Users/JoshuaMendoza/JfuseCodes/FrontendMentor/calculator/SASS/_variables.scss
+
+30: $theme-map-one: (
+31:   $--theme-primaryBackground: hsl(222, 26%, 31%),
+32:   $--theme-toggleBackground: hsl(223, 31%, 20%),
+33:   $--theme-keypadBackground: hsl(223,31%,20%),
+34:   $--theme-screenBackground: hsl(224, 36%, 15%)
+35:   $--theme-keyBackground: hsl(225, 21%, 49%),
+36:   $--theme-keyShadow: hsl(224,28%,35%),
+37:   $--theme-toggleKeyBackground: hsl(6,63%, 50%),
+38:   $--theme-toggleKeyShadow: hsl(6, 70%, 34%),
+39:   $--theme-equalKeyBackground: hsl(6,63%, 50%),
+40:   $--theme-equalKeyShadow: hsl(6, 70%, 34%),
+
+Backtrace:
+/Users/JoshuaMendoza/JfuseCodes/FrontendMentor/calculator/SASS/_variables.scss:35
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/lexer.rb:240:in `expected!'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:862:in `assert_tok'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:797:in `block in paren'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:904:in `without_stop_at'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:792:in `paren'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:746:in `square_list'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:733:in `special_fun'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:727:in `raw'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:642:in `funcall'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:531:in `css_min_max'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:507:in `ident'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:295:in `unary_not'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:295:in `unary_div'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:295:in `unary_minus'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:295:in `unary_plus'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:272:in `times_div_or_mod'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:272:in `plus_or_minus'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:272:in `relational'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:272:in `eq_or_neq'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:272:in `and_expr'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:272:in `or_expr'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:481:in `space'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:422:in `interpolation'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:343:in `expr'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:853:in `assert_expr'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/script/parser.rb:68:in `parse'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1164:in `sass_script'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:653:in `variable'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:387:in `run'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/bin/sass:23:in `load'
+/Users/JoshuaMendoza/.rbenv/versions/2.7.0/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...e-keyBackground\": expected \")\", was \": hsl(225, 21%,...\"\A         on line 35 of /Users/JoshuaMendoza/JfuseCodes/FrontendMentor/calculator/SASS/_variables.scss\A \A 30: $theme-map-one: (\A 31:   $--theme-primaryBackground: hsl(222, 26%, 31%),\A 32:   $--theme-toggleBackground: hsl(223, 31%, 20%),\A 33:   $--theme-keypadBackground: hsl(223,31%,20%),\A 34:   $--theme-screenBackground: hsl(224, 36%, 15%)\A 35:   $--theme-keyBackground: hsl(225, 21%, 49%),\A 36:   $--theme-keyShadow: hsl(224,28%,35%),\A 37:   $--theme-toggleKeyBackground: hsl(6,63%, 50%),\A 38:   $--theme-toggleKeyShadow: hsl(6, 70%, 34%),\A 39:   $--theme-equalKeyBackground: hsl(6,63%, 50%),\A 40:   $--theme-equalKeyShadow: hsl(6, 70%, 34%),"; }

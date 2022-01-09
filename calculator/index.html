@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class='one'lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Calculator app</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles/app.css">
+</head>
+<body id='body'>
+  <main id='main'>
+    <div class='header-container'>
+      <div class='header header-parent'>
+        <div class='header-div1 mx-auto'>calc</div>
+        <div class='header-div2'>THEME
+          <div class="theme-toggle">
+            <label class="custom-radio-button">
+
+              <input id="theme1" name="toggle-state" type="radio" checked />
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="custom-radio-button">
+
+              <input id="theme2" name="toggle-state" type="radio" />
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="custom-radio-button">
+
+              <input id="theme3" name="toggle-state" type="radio" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='row display-container'>
+      <div class='number-display-parent mx-auto p-3 m-3'>
+        <input id='number-display'class='result mx-auto number-display' placeholder = '0'>
+      </div>
+    </div>
+
+    <div class='row calc-main-container'>
+      <div class="calculator-container mx-auto p-3 m-3">
+        <div class='del-btn-div'><button data-function = 'delete' id='del-btn'class='btn del-btn'type="button" name="button">DEL</button></div>
+        <div class='div11'><button data-number class='btn number-btn' type="button" name="button">0</button></div>
+        <div class='div1'>
+          <button data-number class='btn number-btn'type="button" name="button">1</button>
+        </div>
+        <div class='div2'><button data-number class='btn number-btn'type="button" name="button">2</button></div>
+        <div class='div3'><button data-number class='btn number-btn'type="button" name="button">3</button></div>
+        <div class='div4'><button data-number class='btn number-btn'type="button" name="button">4</button></div>
+        <div class='div5'><button data-number class='btn number-btn'type="button" name="button">5</button></div>
+        <div class='div6'><button data-number class='btn number-btn'type="button" name="button">6</button></div>
+        <div class='div7'><button data-number class='btn number-btn'type="button" name="button">7</button></div>
+        <div class='div8'><button data-number class='btn number-btn'type="button" name="button">8</button></div>
+        <div class='div9'><button data-number class='btn number-btn'type="button" name="button">9</button></div>
+        <div class="div10"><button data-number id='decimal-btn' class='btn number-btn decimal-btn'>.</button></div>
+        <div class='reset-btn-div'><button data-function = "reset" id='reset-btn' class='btn' type="button" name="button">RESET</button></div>
+        <div class="div14"><button data-function = 'add' id='addition-btn' class='btn operation-btn' type="button" name="button">+</button></div>
+        <div class="div15"><button data-function ='subtract' id='subtraction-btn'class='btn operation-btn' type="button" name="button">-</button></div>
+        <div class="div16"><button data-function ='multiply' id='multiplication-btn' class='btn operation-btn' type="button" name="button">x</button></div>
+        <div class="div12"><button data-function = 'divide' id='division-btn' class='btn operation-btn' type="button" name="button">&#247;</button></div>
+        <div class='equal-btn-div'><button data-function = 'equals' id='equal-btn' class='btn operation-btn' type="button" name="button">=</button></div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">JfuseCodes</a>.
+    </div>
+  </footer>
+  <script src="app.js" charset="utf-8"></script>
+</body>
+</html>

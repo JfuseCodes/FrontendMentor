@@ -1,0 +1,17 @@
+@import 'variables';
+@import 'mixins';
+
+:root.one {
+  @include spread-map($theme-map-one);
+}
+:root.two {
+  @include spread-map($theme-map-two);
+}
+:root.three {
+  @include spread-map($theme-map-three);
+}
+:root.theme-transition,
+:root.theme-transition * {
+    transition: background-color 1000ms !important;
+    transition-delay: 0s !important;
+}
