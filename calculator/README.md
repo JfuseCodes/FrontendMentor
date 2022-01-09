@@ -1,15 +1,17 @@
-#CALCULATOR
+# CALCULATOR
 
 ## OVERVIEW
 A responsive calculator with 3 color themes.
 
+Try it out: https://jfuse-calculator.netlify.app
 
 ## IMAGES:
 
 ![Alt Text](https://github.com/JfuseCodes/FrontendMentor/blob/main/calculator/calculator-demo.gif)
 
 
-##CHALLENGES:
+## CHALLENGES:
+
 Arguably one of the more challenging projects that I have come across. During this project, I can honestly say that I learned so much. However, I still feel that I have much more to learn. It was a challenging project that I had to break down into many steps. Some may call it mini-problems. Here are a few of the many obstacles that I encountered:
 
 <b>1.</b> Event Listening
@@ -42,6 +44,7 @@ There are many ways to complete a calculator. But here are a few of the articles
 	-Since the text rendered to the user will be a string, the data accessed in javascript is also a string. Computation in string form will concatenate the strings. So this article showed me how to convert to numbers for math use.
 
 ##NOTES:
+
 It is still a work in progress. Things to add:
 
 	-Event Listening for typing both numbers and operators
