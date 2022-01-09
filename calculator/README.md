@@ -6,7 +6,7 @@ A responsive calculator with 3 color themes.
 
 ## IMAGES:
 
-![Alt Text]
+![Alt Text](https://github.com/JfuseCodes/FrontendMentor/blob/main/calculator/calculator-demo.gif)
 
 
 ##CHALLENGES:
