@@ -1,0 +1,85 @@
+/* SCREEN WIDTHS */
+$xs: 0;
+$sm:576px;
+$md:768px;
+$lg:992px;
+$xl:1200px;
+$xxl:1400px;
+$mobile-screen:0px;
+$desktop-screen: 1200px;
+/* SCREEN SIZE LISTS */
+$mobile-phones: $xs,$sm;
+$tablets: $md,$lg;
+$desktops: $xl,$xxl;
+
+/* COLORS */
+$bright-clr: #E6E6E6;
+$modal-clr: #FDFEFF;
+$gray-shadow: rgb(185,192,210);
+/* PRIMARY */
+/* PRIMARY GRADIENTS */
+$siz--gradient: hsl(39,89%,49%);
+$pap--gradient: hsl(230, 89%, 62%);
+$rock--gradient: hsl(349, 71%, 52%);
+$lzrd--gradient: hsl(261, 73%, 60%);
+$spock--gradient: hsl(189, 59%, 53%);
+
+/* PRIMARY SHADOWS */
+$siz--shadow: hsl(40,84%,53%);
+$pap--shadow: hsl(230, 89%, 65%);
+$rock--shadow: hsl(349, 70%, 56%);
+$lzrd--shadow: hsl(261, 72%, 63%);
+$spock--shadow: hsl(189, 58%, 57%);
+
+/* LISTS */
+$border-shadows: $siz--shadow, $pap--shadow, $rock--shadow, $lzrd--shadow, $spock--shadow;
+$border-gradients: $siz--gradient, $pap--gradient, $rock--gradient, $lzrd--gradient, $spock--gradient;
+$border-combos: ($siz--gradient,$siz--shadow), ($pap--gradient,$pap--shadow), ($rock--gradient, $rock--shadow), ($lzrd--gradient, $lzrd--shadow), ($spock--gradient, $spock--shadow);
+
+$game-choices: scissors,paper,rock,lizard,spock;
+
+/* GRADIENTS OF BORDER COLORS for GAME CHOICES */
+// $siz-gradient: $scissors--gradient1,$scissors--shadow;
+// $pap-gradient: $paper--gradient1,$paper--shadow;
+// $rock-clr: $rock--gradient1,$rock--shadow;
+// $lizard-clr: $lizard--gradient1,$lizard--shadow;
+// $spock-clr: $spock--gradient1,$spock--shadow;
+// $siz-clr:$scissors--gradient1;
+// $pap-clr:$paper--gradient1;
+// $rock-clr:$rock--gradient1;
+// $lizard-clr:$lizard--gradient1;
+// $spock-clr:$spock--gradient1;
+
+/* LIST OF BORDER COLORS for GAME CHOICES*/
+// $border-color-list: $siz-clr, $pap-clr, $rock-clr, $lizard-clr, $spock-clr;
+// $border-colors: $siz-clr, $pap-clr, $rock-clr, $lizard-clr, $spock-clr;
+
+/* NEUTRAL */
+$dark-text: hsl(229,25%,31%);
+$score-text: hsl(229, 64%, 46%);
+$header-outline: hsl(217, 16%, 45%);
+
+
+/* BACKGROUND */
+$bg-gradient1: hsl(214, 47%, 23%);
+$bg-gradient2: hsl(237, 49%, 15%);
+$bg-gradient: radial-gradient($bg-gradient1, $bg-gradient2);
+
+/* LIST OF GAME CHOICES */
+// $rock: "rock";
+// $paper: "paper";
+// $scissors: "scissors";
+// $lizard: "lizard";
+// $spock: "spock";
+// $game--choices: $rock, $paper,$scissors,$lizard,$spock;
+
+
+
+
+/* FONTS */
+@font-face{
+  src: url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Spartan:wght@700&display=swap');
+  font-family: 'Spartan', sans-serif;
+};
+
+$font-fam: 'Spartan', sans-serif;

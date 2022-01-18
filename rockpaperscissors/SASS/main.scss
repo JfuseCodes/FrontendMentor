@@ -1,0 +1,102 @@
+@import 'variables';
+@import 'reset';
+@import 'mixins';
+html{
+  font-family: $font-fam;
+  font-size:32px;
+  background: $bg-gradient;
+
+};
+.is--hidden{
+  display:none;
+}
+
+/* HEADER */
+body{
+  .score-banner--container{
+    @include scorekeeperbox;
+    .score-banner--scorekeeper{
+      @include scorebannerscorekeeper;
+    }
+    .score-banner--heading{
+      @include score-heading($score-text,40%,600);
+    }
+    .score-banner--digit{
+      @include score-heading($dark-text,150%,700);
+    }
+
+    .score-banner--item-logo{
+      img{ @include logo-img }
+    }
+  }
+}
+
+/* GAME PLAY SECTION */
+body{
+  // margin:auto;
+  .main{
+    .game-container{
+      @include game--container();
+      .game-pentagon-container{
+        position:absolute;
+        .pentagon{
+          @include pentagon--sizing();
+        }
+      }
+
+
+      @include game-choice($game-choices,$border-gradients);
+      @include game-choice-position($game-choices);
+    }
+  }
+}
+
+
+/* RULE INFORMATION MODAL */
+body{
+  .rules-info--container{
+    @include rules-info-modal();
+    @include rules-info-modal-desktop();
+  }
+
+  .rules-info--heading{
+    font-size:80%;
+    @include rules-info-heading();
+  }
+  .rules-info--content{
+
+    img{
+      margin:auto;
+      @include rules-img();
+    };
+  }
+  .info-close-button{
+    @include rules-info-close();
+  }
+
+  .info-close__image:hover,
+  .info-close__image:focus{
+    cursor:pointer;
+  }
+}
+
+/* APP FOOTER */
+.main-footer{
+  // @include center-flex(flex,center,center)
+  @include rules-button-placement;
+  .rules-button-container{
+    .rules--button{
+      @include button-styling;
+    }
+  }
+}
+
+body{
+  .attribution{
+    font-size:.4rem;
+    color: $dark-text};
+  .footer-link{
+    text-decoration: none;
+    color:$bright-clr;
+  }
+}

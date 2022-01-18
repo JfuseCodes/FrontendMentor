@@ -1,0 +1,278 @@
+/* HEADER */
+@mixin center-flex($display,$justify-content,$align-items){
+  display:$display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+};
+@mixin score-mq($break-point,$padding:0,$margin:0,$height:auto,$width:auto){
+  @for $i from 0 to length($break-point){
+    @media(min-width: #{nth($break-point, $i + 1)}){
+      padding: $padding $padding;
+      margin: $margin $margin;
+      width:$width;
+      height:$height;
+    }
+  }
+}
+
+@mixin scorekeeperbox {
+  @include center-flex(flex,space-between,center);
+  border:.1rem solid $header-outline;
+  flex-direction: row-reverse;
+  border-radius:8px;
+  @include score-mq($mobile-phones, $padding:12px, $margin:1rem auto, $height:60px, $width:80%);
+  @include score-mq($tablets, 14px, 1rem auto, 65px, 50%);
+  @include score-mq($desktops, 15px,1rem auto, 75px, 45%);
+
+};
+
+@mixin scorebannerscorekeeper {
+  @include center-flex(flex,center,center);
+  flex-direction:column;
+  background-color:$bright-clr;
+  border-radius:8px;
+  @include score-mq($mobile-phones, $padding:20px 30px, $margin: .1%, $height:55%, $width:1rem);
+  @include score-mq($tablets, $padding:20px 30px, $margin:.1%, $height:1.3rem, $width:1rem);
+  @include score-mq($desktops, $padding:20px 30px, $margin:.1%, $height:1.6rem, $width:1rem);
+};
+
+@mixin score-heading($color,$font-size,$font-weight) {
+  color: $color;
+  font-size:$font-size;
+  font-weight: $font-weight;
+}
+
+@mixin img-mq($break-point, $padding:0, $width:auto, $height:auto){
+  @for $i from 0 to length($break-point){
+    @media(min-width: #{nth($break-point, $i + 1)}){
+      padding: $padding $padding;
+      width:$width;
+      height:$height;
+    }
+  }
+}
+
+@mixin logo-img {
+  @include center-flex(flex,center,center);
+  @include img-mq($mobile-phones,$width:55px);
+  @include img-mq($tablets, $width:65px);
+  @include img-mq($desktops, $width:80px);
+}
+
+@mixin modal-mq($break-point,$top:0,$left:0,$width:100%,$height:100%,$text-align:center,$padding:0){
+  @for $i from 0 to length($break-point){
+    @media(min-width: #{nth($break-point, $i + 1)}){
+      top:$top;
+      left:$left;
+      width:$width;
+      height:$height;
+      text-align:$text-align;
+      padding:$padding;
+    }
+  }
+}
+
+@mixin rules-img(){
+  @include center-flex(flex,center,center);
+  @include img-mq($desktops,$width:85%,$height:250px);
+};
+
+@mixin space-between-mobile($break-point,$display,$justify-content,$align-content){
+  @for $i from 0 to length($break-point){
+    @media(min-width: #{nth($break-point, $i + 1)}){
+      display:$display;
+      justify-content: $justify-content;
+      align-content:$align-content;
+      flex-direction:column;
+    }
+  }
+}
+@mixin rules-info-heading(){
+  @include modal-mq($mobile-phones,$height:100px,$padding: 25px 0 0 0);
+  @include modal-mq($tablets,$height:50px,$padding:25px 0 0 0);
+  @include modal-mq($desktops, $width:0, $height:40px, $text-align:left, $padding:25px 25px 5px 6%);
+}
+@mixin close-button-position($break-point,$display:block,$position:absolute,$left:0,$right:0,$top:0,$bottom:0,$padding:0){
+  @for $i from 0 to length($break-point){
+    @media(min-width: #{nth($break-point, $i + 1)}){
+      display:$display;
+      position:$position;
+      left:$left;
+      right:$right;
+      bottom:$bottom;
+      top:$top;
+
+    }
+  }
+}
+@mixin rules-info-close(){
+  @include close-button-position($mobile-phones,$display:block,$top:90%);
+  @include close-button-position($desktops,$display:block,$position:absolute, $top:5%, $left:75%);
+}
+
+@mixin rules-info-modal(){
+  background-color:$modal-clr;
+  text-align:center;
+  position:fixed;
+  z-index: 1;
+  overflow:auto;
+  font-weight:700;
+  border-radius:8px;
+
+
+  @include modal-mq($mobile-phones);
+  @include modal-mq($tablets,$width:45%,$height:455px,$left:28%,$top:130px);
+}
+@mixin rules-info-modal-desktop(){
+  @include modal-mq($desktops,$width:27%,$height:350px,$left:36%,$top:110px);
+}
+
+
+// FOOTER && RULE INFORMATION MODAL
+
+
+@mixin rules-button-position($break-point,$display,$justify-content,$align-items,$padding:0){
+  @for $i from 0 to length($break-point){
+    @media(min-width: #{nth($break-point, $i + 1)}){
+      display:$display;
+      justify-content: $justify-content;
+      align-items: $align-items;
+      padding:$padding;
+    }
+  }
+};
+
+@mixin rules-button-placement {
+  @include rules-button-position($mobile-phones, flex, center, center, $padding: 0 0 20px);
+  @include rules-button-position($tablets, flex, center,center, $padding: 40px 0 20px 0);
+  @include rules-button-position($desktops,flex, flex-end, center, $padding: 40px 2% 15px 0)
+}
+@mixin button-styling{
+  width:5rem;
+  border: 1px solid $bright-clr;
+  border-radius:8px;
+  color:$bright-clr;
+  text-align:center;
+  padding:.4rem .2rem;
+  font-size:.60rem;
+  font-weight:550;
+  cursor: pointer;
+}
+
+//MAIN
+
+//PENTAGON
+@mixin main-size-mq($break-point, $position:null,$inset:null,$width:auto,$height:auto,$margin:auto, $padding:0,$z-index:null,$background-image:null){
+  @for $i from 0 to length( $break-point ){
+    @media(min-width: #{nth( $break-point, $i + 1 )}){
+      width:$width;
+      height:$height;
+      margin:$margin;
+      padding:$padding;
+      position:$position;
+      inset:$inset;
+      z-index: $z-index;
+    }
+  }
+}
+
+@mixin game--container(){
+  display:flex;
+  justify-content: center;
+  @include main-size-mq($mobile-phones,$width:250px,$padding: 85px 0 85px 0);
+  @include main-size-mq($tablets, $width:400px,$padding:50px 0 50px 0);
+  @include main-size-mq($desktops, $width:400px,$padding: 50px 0 50px 0);
+}
+
+@mixin pentagon--sizing(){
+  z-index:0;
+  @include main-size-mq($mobile-phones, $position:relative, $inset: -60px 0 0 0 , $width:200px, $z-index:1,$height:400px );
+  @include main-size-mq($tablets, $position: relative, $inset: 40px 0 0 0, $width:240px);
+  @include main-size-mq($desktops, $position:relative, $inset: 10px 0 0 0 , $width:300px);
+}
+
+@mixin size-mq($break-point,$width,$height,$border-width,$padding:null){
+  @for $i from 0 to length($break-point){
+    @media(min-width: #{nth($break-point, $i + 1)}){
+      width:$width;
+      height:$height;
+      border-width:$border-width;
+      padding:$padding;
+    }
+  }
+}
+
+@mixin positions-mq($break-point,$position:null,$inset:null){
+  @for $i from 0 to length( $break-point){
+    @media(min-width: #{nth($break-point, $i+1)}){
+      inset: $inset;
+    }
+  }
+}
+
+@mixin game-choice-position($names){
+  @each $name in $names {
+    @if $name == scissors{
+      .game--item-#{$name}{
+        @include positions-mq($mobile-phones, $inset: -90px 0 0 215px );
+        @include positions-mq($tablets, $inset: -100px 0 0 260px );
+        @include positions-mq($desktops, $inset: -130px 0 0 270px );
+      }
+    }
+      @if $name == paper{
+        .game--item-#{$name}{
+          @include positions-mq($mobile-phones, $inset: -10px 0 0 220px);
+          @include positions-mq($tablets, $inset: 0px 0 0 260px );
+          @include positions-mq($desktops, $inset: -20px 0 0 280px );
+
+        }
+      }
+
+
+    @if $name == rock{
+      .game--item-#{$name}{
+        @include positions-mq($mobile-phones, $inset:120px 0 0 70px);
+        @include positions-mq($tablets, $inset: 140px 0 0 80px );
+        @include positions-mq($desktops, $inset: 160px 0 0 80px );
+
+      }
+    }
+    @if $name == lizard{
+      .game--item-#{$name}{
+        @include positions-mq($mobile-phones, $inset: 120px 0 0 -176px);
+        @include positions-mq($tablets, $inset: 140px 0 0 -200px );
+        @include positions-mq($desktops, $inset: 160px 0 0 -220px );
+
+      }
+    }
+    @if $name == spock{
+      .game--item-#{$name}{
+        @include positions-mq($mobile-phones, $inset: -10px 0 0 -320px);
+        @include positions-mq($tablets, $inset: 0 0 0 -380px);
+        @include positions-mq($desktops, $inset: -20px 0 0 -420px );
+      }
+    }
+  };
+}
+
+//MIXIN for hand signs
+@mixin game-choice($names,$border-colors){
+  @for $i from 0 to length($names){
+    .game--item-#{nth($names,$i+1)} {
+      @include center-flex(flex,center,center);
+      background:
+      linear-gradient($bright-clr,$bright-clr) padding-box;
+      border:12px solid  #{nth($border-colors, $i+1)};
+      border-radius: 50%;
+      box-shadow: inset 2px 12px 5px -5px $gray-shadow;
+      margin:70px 0;
+      position:relative;
+      z-index:1;
+      cursor:pointer;
+
+      @include size-mq($mobile-phones,2px,4px,12px,$padding:40px);
+      @include size-mq($tablets, 12px, 12px, 18px);
+      @include size-mq($desktops,15px,15px,20px);
+    }
+  }
+}
