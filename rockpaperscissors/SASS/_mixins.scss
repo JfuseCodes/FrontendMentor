@@ -4,13 +4,15 @@
   justify-content: $justify-content;
   align-items: $align-items;
 };
-@mixin score-mq($break-point,$padding:0,$margin:0,$height:auto,$width:auto){
+@mixin score-mq($break-point,$padding:0,$margin:null,$height:auto,$width:auto,$z-index:null,$position:null){
   @for $i from 0 to length($break-point){
     @media(min-width: #{nth($break-point, $i + 1)}){
+      position:$position;
       padding: $padding $padding;
       margin: $margin $margin;
       width:$width;
       height:$height;
+      z-index:$z-index;
     }
   }
 }
@@ -22,8 +24,7 @@
   border-radius:8px;
   @include score-mq($mobile-phones, $padding:12px, $margin:1rem auto, $height:60px, $width:80%);
   @include score-mq($tablets, 14px, 1rem auto, 65px, 50%);
-  @include score-mq($desktops, 15px,1rem auto, 75px, 45%);
-
+  @include score-mq($desktops, 15px,1rem auto, 75px, 45%, $position:relative,$z-index: 0);
 };
 
 @mixin scorebannerscorekeeper {
@@ -77,22 +78,12 @@
   @include img-mq($desktops,$width:85%,$height:250px);
 };
 
-@mixin space-between-mobile($break-point,$display,$justify-content,$align-content){
-  @for $i from 0 to length($break-point){
-    @media(min-width: #{nth($break-point, $i + 1)}){
-      display:$display;
-      justify-content: $justify-content;
-      align-content:$align-content;
-      flex-direction:column;
-    }
-  }
-}
 @mixin rules-info-heading(){
   @include modal-mq($mobile-phones,$height:100px,$padding: 25px 0 0 0);
   @include modal-mq($tablets,$height:50px,$padding:25px 0 0 0);
   @include modal-mq($desktops, $width:0, $height:40px, $text-align:left, $padding:25px 25px 5px 6%);
 }
-@mixin close-button-position($break-point,$display:block,$position:absolute,$left:0,$right:0,$top:0,$bottom:0,$padding:0){
+@mixin close-button-position($break-point,$display:block,$position:absolute,$left:0,$right:0,$top:0,$bottom:0,$padding:0,){
   @for $i from 0 to length($break-point){
     @media(min-width: #{nth($break-point, $i + 1)}){
       display:$display;
@@ -101,12 +92,11 @@
       right:$right;
       bottom:$bottom;
       top:$top;
-
     }
   }
 }
 @mixin rules-info-close(){
-  @include close-button-position($mobile-phones,$display:block,$top:90%);
+  @include close-button-position($mobile-phones,$display:block, $top:90%);
   @include close-button-position($desktops,$display:block,$position:absolute, $top:5%, $left:75%);
 }
 
@@ -119,7 +109,6 @@
   font-weight:700;
   border-radius:8px;
 
-
   @include modal-mq($mobile-phones);
   @include modal-mq($tablets,$width:45%,$height:455px,$left:28%,$top:130px);
 }
@@ -127,40 +116,99 @@
   @include modal-mq($desktops,$width:27%,$height:350px,$left:36%,$top:110px);
 }
 
-
 // FOOTER && RULE INFORMATION MODAL
-
-
-@mixin rules-button-position($break-point,$display,$justify-content,$align-items,$padding:0){
+@mixin parent-mq($break-point,$bottom:null, $position:null, $width:null, $inset:null,){
   @for $i from 0 to length($break-point){
     @media(min-width: #{nth($break-point, $i + 1)}){
+      position: $position;
+      width:$width;
+      inset:$inset;
+      bottom:$bottom;
+    }
+  }
+}
+@mixin main-footer(){
+  @include parent-mq($mobile-phones, $position:absolute, $width:99%, $bottom:0px)
+  @include parent-mq($tablets, $position:absolute, $width:100%, $bottom:25px)
+}
+
+@mixin button-position($break-point,$position:null,$inset:null,$display:null,$justify-content:null,$align-items:null,$padding:0,$text-align:null, $tr-1:null,$tr-bc:null,$tr-trns:null, $tr-bg:null){
+  @for $i from 0 to length($break-point){
+    @media(min-width: #{nth($break-point, $i + 1)}){
+      position:$position;
+      inset:$inset;
       display:$display;
       justify-content: $justify-content;
       align-items: $align-items;
       padding:$padding;
+      transition: $tr-1,border-color $tr-bc, background-color $tr-bg,  transform $tr-trns;
+      &:hover{
+        @media(min-width:$desktop-screen){
+          border-color:$dark-text;
+          color:$dark-text;
+          background-color:$bright-clr;
+          transform:translateY(-5px);
+        }
+      }
     }
   }
 };
 
-@mixin rules-button-placement {
-  @include rules-button-position($mobile-phones, flex, center, center, $padding: 0 0 20px);
-  @include rules-button-position($tablets, flex, center,center, $padding: 40px 0 20px 0);
-  @include rules-button-position($desktops,flex, flex-end, center, $padding: 40px 2% 15px 0)
+@mixin rules-button--placement {
+
+  @include button-position($mobile-phones, $position:relative, $inset: 400px 0 0 0);
+  @include button-position($tablets,$position:relative, $inset: 400px 0 0 0,$padding: 0px 0 0 0);
+  @include button-position($desktops, $position:relative, $inset: 450px 0 0 500px, $padding: 0 0 0 0, $tr-1:.5s,$tr-bc:.5s,$tr-trns:.5s,$tr-bg:.5s);
+
 }
-@mixin button-styling{
-  width:5rem;
-  border: 1px solid $bright-clr;
-  border-radius:8px;
-  color:$bright-clr;
-  text-align:center;
-  padding:.4rem .2rem;
-  font-size:.60rem;
-  font-weight:550;
-  cursor: pointer;
+
+@mixin rules-button--styling(){
+  @include button-mq($mobile-phones, $width:5rem, $border: 1px solid $bright-clr,$color:$bright-clr,$padding:.4rem .2rem, $font-size:.55rem, $font-weight:525, $cursor:pointer);
 }
 
 //MAIN
+@mixin button-mq($break-point, $width, $border:null, $border-radius:8px, $color:$dark-text, $text-align:center, $padding:0, $font-size:1rem,$font-weight:null, $cursor:null,$background-color:null,$tr-1:null,$tr-bc:null,$tr-trns:null,$tr-bg:null ){
+  @for $i from 0 to length( $break-point){
+    @media(min-width: #{nth($break-point, $i+1)}){
+      width:$width;
+      border: $border;
+      border-radius: $border-radius;
+      color:$color;
+      text-align:$text-align;
+      padding:$padding;
+      font-size:$font-size;
+      font-weight:$font-weight;
+      cursor: $cursor;
+      background-color: $background-color;
+      letter-spacing: .01rem;
+    }
+    &:hover{
+      @media(min-width:$desktop-screen){
+        transform:translateY(-5px);
+      }
+    }
+  }
+}
 
+@mixin play-again-button(){
+  @include button-mq($mobile-phones, $width:6rem, $border: 3px solid $bright-clr, $background-color: $bright-clr, $color: $dark-text, $font-size:.6rem, $padding: .4rem .2rem, $font-weight:525,);
+  @include button-mq($tablets, $width:7rem, $border: 3px solid $bright-clr, $background-color: $bright-clr, $color: $dark-text, $font-size:.6rem, $padding: .4rem .2rem, $font-weight:525,)
+  @include button-mq($desktops, $width:7rem, $border: 3px solid $bright-clr, $background-color: $bright-clr, $color: $dark-text, $font-size:.6rem, $padding: .4rem .2rem, $font-weight:525,$tr-1:.5s,$tr-bc:.5s,$tr-trns:.5s,$tr-bg:.5s,$cursor:pointer)
+};
+@mixin play-again-mq($break-point, $position:relative,$inset:0,$padding:null){
+  @for $i from 0 to length( $break-point){
+    @media(min-width: #{nth($break-point, $i+1)}){
+      padding:$padding;
+      position: $position;
+      inset: $inset;
+    }
+  }
+}
+@mixin play-again-button--placement(){
+  @include play-again-mq($mobile-phones, $position:relative, $inset: 320px 0 0 0);
+  @include play-again-mq($tablets, $position:relative, $inset: 320px 0 0 0);
+  @include play-again-mq($desktops, $position:relative, $inset: 220px 0 0 0);
+}
 //PENTAGON
 @mixin main-size-mq($break-point, $position:null,$inset:null,$width:auto,$height:auto,$margin:auto, $padding:0,$z-index:null,$background-image:null){
   @for $i from 0 to length( $break-point ){
@@ -174,30 +222,31 @@
       z-index: $z-index;
     }
   }
-}
+};
 
 @mixin game--container(){
   display:flex;
   justify-content: center;
-  @include main-size-mq($mobile-phones,$width:250px,$padding: 85px 0 85px 0);
-  @include main-size-mq($tablets, $width:400px,$padding:50px 0 50px 0);
-  @include main-size-mq($desktops, $width:400px,$padding: 50px 0 50px 0);
+  @include main-size-mq($mobile-phones,$width:250px,$height:0,$padding: 0px 0 0 0);
+  @include main-size-mq($tablets, $width:400px,$height:0,$padding:0px 0 0px 0);
+  @include main-size-mq($desktops, $width:400px,$height:0,$padding: 0px 0 0px 0);
 }
 
 @mixin pentagon--sizing(){
   z-index:0;
-  @include main-size-mq($mobile-phones, $position:relative, $inset: -60px 0 0 0 , $width:200px, $z-index:1,$height:400px );
-  @include main-size-mq($tablets, $position: relative, $inset: 40px 0 0 0, $width:240px);
-  @include main-size-mq($desktops, $position:relative, $inset: 10px 0 0 0 , $width:300px);
+  @include main-size-mq($mobile-phones, $position:relative, $inset: -20px 0 0 0 , $width:200px, $z-index:0,$height:400px );
+  @include main-size-mq($tablets, $position: relative, $inset: 50px 0 0 0, $width:240px);
+  @include main-size-mq($desktops, $position:relative, $inset: 60px 0 0 0 , $width:300px);
 }
 
-@mixin size-mq($break-point,$width,$height,$border-width,$padding:null){
+@mixin size-mq($break-point,$width,$height,$border-width,$padding:null,$tr-1:null, $tr-bc:null, $tr-trns:null ){
   @for $i from 0 to length($break-point){
     @media(min-width: #{nth($break-point, $i + 1)}){
       width:$width;
       height:$height;
       border-width:$border-width;
       padding:$padding;
+      transition: $tr-1, border-color $tr-bc,  transform $tr-trns;
     }
   }
 }
@@ -206,6 +255,7 @@
   @for $i from 0 to length( $break-point){
     @media(min-width: #{nth($break-point, $i+1)}){
       inset: $inset;
+      position:$position;
     }
   }
 }
@@ -214,48 +264,54 @@
   @each $name in $names {
     @if $name == scissors{
       .game--item-#{$name}{
-        @include positions-mq($mobile-phones, $inset: -90px 0 0 215px );
-        @include positions-mq($tablets, $inset: -100px 0 0 260px );
-        @include positions-mq($desktops, $inset: -130px 0 0 270px );
+        @include positions-mq($mobile-phones, $inset: -48px 0 0 215px);
+        @include positions-mq($tablets, $inset: -85px 0 0 260px );
+        @include positions-mq($desktops, $inset: -80px 0 0 270px );
       }
     }
-      @if $name == paper{
+    @if $name == paper{
         .game--item-#{$name}{
-          @include positions-mq($mobile-phones, $inset: -10px 0 0 220px);
-          @include positions-mq($tablets, $inset: 0px 0 0 260px );
-          @include positions-mq($desktops, $inset: -20px 0 0 280px );
-
+          @include positions-mq($mobile-phones, $inset: 37px 0 0 220px);
+          @include positions-mq($tablets, $inset: 15px 0 0 260px );
+          @include positions-mq($desktops, $inset: 40px 0 0 280px );
         }
       }
-
-
     @if $name == rock{
       .game--item-#{$name}{
-        @include positions-mq($mobile-phones, $inset:120px 0 0 70px);
-        @include positions-mq($tablets, $inset: 140px 0 0 80px );
-        @include positions-mq($desktops, $inset: 160px 0 0 80px );
-
+        @include positions-mq($mobile-phones, $inset:155px 0 0 70px);
+        @include positions-mq($tablets, $inset: 155px 0 0 80px );
+        @include positions-mq($desktops, $inset: 210px 0 0 80px );
       }
     }
     @if $name == lizard{
       .game--item-#{$name}{
-        @include positions-mq($mobile-phones, $inset: 120px 0 0 -176px);
-        @include positions-mq($tablets, $inset: 140px 0 0 -200px );
-        @include positions-mq($desktops, $inset: 160px 0 0 -220px );
-
+        @include positions-mq($mobile-phones, $inset: 155px 0 0 -176px);
+        @include positions-mq($tablets, $inset: 155px 0 0 -200px );
+        @include positions-mq($desktops, $inset: 210px 0 0 -220px );
       }
     }
     @if $name == spock{
       .game--item-#{$name}{
-        @include positions-mq($mobile-phones, $inset: -10px 0 0 -320px);
-        @include positions-mq($tablets, $inset: 0 0 0 -380px);
-        @include positions-mq($desktops, $inset: -20px 0 0 -420px );
+        @include positions-mq($mobile-phones, $inset: 39px 0 0 -320px);
+        @include positions-mq($tablets, $inset: 15px 0 0 -380px);
+        @include positions-mq($desktops, $inset: 40px 0 0 -420px );
       }
     }
   };
+};
+
+@mixin user-selection-position($names){
+  .user--choice{
+    @include size-mq($mobile-phones,$width:32px,$height:32px,$border-width:16px,$padding:40px );
+    @include size-mq($desktops,$width:160px,$height:160px,$border-width:40px,$padding:40px );
+
+    @include positions-mq($mobile-phones, $inset: -15px 0 0 -100px);
+    @include positions-mq($tablets, $inset: -15px 0 0 -105px);
+    @include positions-mq($desktops, $inset: 0px 0 0 -350px);
+  }
 }
 
-//MIXIN for hand signs
+//MIXIN for user hand signs
 @mixin game-choice($names,$border-colors){
   @for $i from 0 to length($names){
     .game--item-#{nth($names,$i+1)} {
@@ -272,7 +328,102 @@
 
       @include size-mq($mobile-phones,2px,4px,12px,$padding:40px);
       @include size-mq($tablets, 12px, 12px, 18px);
-      @include size-mq($desktops,15px,15px,20px);
+      @include size-mq($desktops,$width:15px,$height:15px,$border-width:20px,$tr-1:.5s,$tr-bc:.5s,$tr-trns:.5s);
+      &:hover{
+        @media screen and (min-width:$desktop-screen){
+          transform: translateY(-20px);
+        }
+      }
+    }
+  };
+};
+
+//MIXIN for house HAND SIGNS
+@mixin housegame-choice($names,$border-colors){
+  @for $i from 0 to length($names){
+    .house--item-#{nth($names,$i+1)} {
+      @include center-flex(flex,center,center);
+      background:
+      linear-gradient($bright-clr,$bright-clr) padding-box;
+      border:12px solid  #{nth($border-colors, $i+1)};
+      border-radius: 50%;
+      box-shadow: inset 2px 12px 5px -5px $gray-shadow;
+      margin:70px 0;
+      position:absolute;
+      z-index:1;
+      cursor:pointer;
+
+      @include size-mq($mobile-phones,2px,4px,12px,$padding:40px);
+      @include size-mq($tablets, 12px, 12px, 18px);
+      @include size-mq($desktops,$width:15px,$height:15px,$border-width:20px,);
     }
   }
+};
+@mixin house-choice--position(){
+  @include size-mq($mobile-phones,$width:32px,$height:32px,$border-width:16px,$padding:42px );
+  @include size-mq($desktops,$width:160px,$height:160px,$border-width:40px,$padding:40px );
+
+  @include positions-mq($mobile-phones,$position:null, $inset: -20px 0 0 125px );
+  @include positions-mq($tablets, $inset: -15px 0 0 155px );
+  @include positions-mq($desktops, $inset: 0px 0 0 300px );
+};
+
+@mixin highlight-winner($break-point,$height, $width, $box-shadow1,$box-shadow2,$box-shadow3, $border-radius:50%, $position:relative, $inset:null,$bottom:null, $top:null, $left:null, $right:null,$z-index:null,$opacity:null,$padding:null,$display:null){
+  @for $i from 0 to length($break-point){
+    @media(min-width: #{nth($break-point,$i + 1)}){
+      height:$height;
+      width:$width;
+      display:$display;
+      border-radius: $border-radius;
+      position: $position;
+      top:$top;
+      bottom:$bottom;
+      right:$right;
+      left:$left;
+      inset:$inset;
+      box-shadow:$box-shadow1, $box-shadow2, $box-shadow3;
+      z-index:$z-index;
+      opacity: $opacity;
+      padding:$padding;
+    }
+  }
+}
+@mixin house--winner(){
+  @include highlight-winner($mobile-phones, $height:12px, $width: 12px, $box-shadow1: 0 0 0 55px $light-one, $box-shadow2: 0 0 0 80px $light-two, $box-shadow3:0 0 0 110px $light-three, $inset: 80px 0 0 150px, $padding:40px, $opacity: .5);
+  @include highlight-winner($tablets, $height:12px, $width: 12px, $box-shadow1: 0 0 0 40px $light-one, $box-shadow2: 0 0 0 60px $light-two, $box-shadow3:0 0 0 80px $light-three, $inset: 80px 0 0 150px, $z-index:-1, $opacity: .5);
+  @include highlight-winner($desktops, $height:120px, $width: 120px, $box-shadow1: 0 0 0 100px $light-one, $box-shadow2: 0 0 0 160px $light-two, $box-shadow3:0 0 0 220px $light-three, $inset: 130px 0 0 345px, $z-index:-1,$opacity:.5);
+};
+@mixin user--winner(){
+  @include highlight-winner($mobile-phones, $height:12px, $width: 12px, $box-shadow1: 0 0 0 55px $light-one, $box-shadow2: 0 0 0 80px $light-two, $box-shadow3:0 0 0 110px $light-three, $inset: 75px 0 0 -40px, $padding:40px,$opacity:.5);
+  @include highlight-winner($tablets, $height:12px, $width: 12px, $box-shadow1: 0 0 0 40px $light-one, $box-shadow2: 0 0 0 60px $light-two, $box-shadow3:0 0 0 80px $light-three, $inset: 80px 0 0 -30px, $z-index:-1, $opacity: .5);
+  @include highlight-winner($desktops, $height:120px, $width: 120px, $box-shadow1: 0 0 0 100px $light-one, $box-shadow2: 0 0 0 160px $light-two, $box-shadow3:0 0 0 220px $light-three, $inset: 135px 0 0 -330px, $z-index:-1,$opacity:.5);
+};
+
+@mixin text-mq($break-point,$inset,$position:relative, $text-align:null, $font-size:1rem, $font-weight:null, $color: $bright-clr){
+  @for $i from 0 to length($break-point){
+    @media(min-width: #{nth( $break-point, $i + 1 )}){
+      position:$position;
+      inset: $inset;
+      text-align: $text-align;
+      font-size:$font-size;
+      font-size:$font-size;
+      font-weight: $font-weight;
+      color:$color;
+    }
+  }
+}
+@mixin outcome-text(){
+  @include text-mq($mobile-phones, $inset: 260px 0 0 0, $text-align:center, $font-size:1.4rem,$font-weight:600);
+  @include text-mq($tablets, $inset: 260px 0 0 0, $text-align:center, $font-size:1.5rem,$font-weight:600)
+  @include text-mq($desktops, $inset: 145px 0 0 0, $text-align:center, $font-size:1.8rem,$font-weight:600)
+}
+@mixin user-choice-text(){
+  @include text-mq($mobile-phones, $inset:160px 0 0 -45px, $text-align:left, $font-size:.4rem, $font-weight:600);
+  @include text-mq($tablets, $inset:-35px 0 0 -20px, $text-align:left, $font-size:.4rem, $font-weight:600);
+  @include text-mq($desktops, $inset:-55px 0 0 -280px, $text-align:left, $font-size:.6rem, $font-weight:600);
+}
+@mixin house-choice-text(){
+  @include text-mq($mobile-phones, $inset:145px 0 0 60px, $text-align:right, $font-size:.4rem, $font-weight:600);
+  @include text-mq($tablets, $inset:-50px 0 0 60px, $text-align:right, $font-size:.4rem, $font-weight:600);
+  @include text-mq($desktops, $inset:-75px 0 0 375px, $text-align:left, $font-size:.6rem, $font-weight:600);
 }

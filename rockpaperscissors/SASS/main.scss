@@ -4,7 +4,7 @@
 html{
   font-family: $font-fam;
   font-size:32px;
-  background: $bg-gradient;
+  background: $bg-gradient2;
 
 };
 .is--hidden{
@@ -13,6 +13,7 @@ html{
 
 /* HEADER */
 body{
+
   .score-banner--container{
     @include scorekeeperbox;
     .score-banner--scorekeeper{
@@ -39,17 +40,98 @@ body{
       @include game--container();
       .game-pentagon-container{
         position:absolute;
+
+        height:10px;
         .pentagon{
           @include pentagon--sizing();
         }
       }
-
-
       @include game-choice($game-choices,$border-gradients);
       @include game-choice-position($game-choices);
+
+      .game--item-rock{
+        @media(min-width: $desktops){
+          transform: translateY(-5px);
+        }
+      }
+      @include user-selection-position($game-choices);
+
+      .game--item{
+        img{
+          width:100px;
+          height:100px;
+        }
+      }
     }
   }
-}
+
+  .gameplay-container{
+
+    @include game--container();
+
+    .gameplay--choices--house{
+      @include housegame-choice($game-choices,$border-gradients)
+
+      .h-border--parent{
+        position:absolute;
+        width:1px;
+        height:1px;
+
+        .house--border-win{
+          @include house--winner();
+        }
+        .user--border-win{
+          @include user--winner();
+        }
+      }
+
+      .house-parent{
+        position:relative;
+        .house--choice{
+          @include house-choice--position();
+          img{
+
+            width:200px;
+            height:200px;
+          }
+        }
+      }
+    }
+
+    .round-outcome--parent{
+      position:absolute;
+      .gameplay--round-outcome{
+
+        @include outcome-text();
+      }
+      .user-choice--text{
+        @include user-choice-text();
+      }
+
+      .house-choice--text{
+        @include house-choice-text();
+      }
+    }
+
+    .gameplay--play-again{
+      position:absolute;
+      @include play-again-button--placement();
+
+      .gameplay--play--again--button{
+        position:relative;
+        @include play-again-button()
+        transition:.5s;
+        &:hover{
+          @media(min-width:$desktop-screen){
+            background-color: $bg-gradient1;
+            color:$bright-clr;
+            border-color:$bright-clr;
+          }
+        }
+      }
+    }
+  }
+};
 
 
 /* RULE INFORMATION MODAL */
@@ -79,24 +161,15 @@ body{
     cursor:pointer;
   }
 }
-
 /* APP FOOTER */
 .main-footer{
-  // @include center-flex(flex,center,center)
-  @include rules-button-placement;
+  display:flex;
+  justify-content: center;
   .rules-button-container{
+    position:absolute;
     .rules--button{
-      @include button-styling;
+      @include rules-button--placement;
+      @include rules-button--styling;
     }
-  }
-}
-
-body{
-  .attribution{
-    font-size:.4rem;
-    color: $dark-text};
-  .footer-link{
-    text-decoration: none;
-    color:$bright-clr;
   }
 }

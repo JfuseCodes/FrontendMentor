@@ -3,17 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <script src="app.js" defer></script>
   <link rel="stylesheet" href="Styles/main.css">
-  <title>Frontend Mentor | Rock, Paper, Scissors</title>
-
-
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title> Rock, Paper, Scissors, Spock, Lizard</title>
 </head>
 <body>
   <div class='score-banner--container'>
@@ -27,38 +20,95 @@
   </div>
 
   <main class='main'>
+
     <div class='game-container'>
+
       <div class='game-pentagon-container'>
         <img class='pentagon' src="images/bg-pentagon.svg" alt="pentagon">
       </div>
-      <div class='game--item game--item-scissors'>
-        <img src="images/icon-scissors.svg" alt="scissors-logo">
-      </div>
-      <div class='game--item game--item-paper'>
-        <img src="images/icon-paper.svg" alt="paper-logo">
-      </div>
-      <div class='game--item game--item-rock'>
-        <img src="images/icon-rock.svg" alt="rock-logo">
-      </div>
-      <div class='game--item game--item-lizard'>
-        <img src="images/icon-lizard.svg" alt="lizard-logo">
-      </div>
-      <div class="game--item game--item-spock">
-        <img src="images/icon-spock.svg" alt="spock-logo">
-      </div>
 
+        <div class='game--item game--item-scissors'>
+          <img src="images/icon-scissors.svg" alt="scissors-logo">
+        </div>
+
+        <div class='game--item game--item-paper'>
+          <img src="images/icon-paper.svg" alt="paper-logo">
+        </div>
+
+        <div class='game--item game--item-rock'>
+          <img src="images/icon-rock.svg" alt="rock-logo">
+        </div>
+
+        <div class='game--item game--item-lizard'>
+          <img src="images/icon-lizard.svg" alt="lizard-logo">
+        </div>
+
+        <div class="game--item game--item-spock">
+          <img src="images/icon-spock.svg" alt="spock-logo">
+        </div>
 
     </div>
 
     <div class='gameplay-container'>
+
       <div class='gameplay--choices'>
         <div class='gameplay--choices--user'></div>
-        <div class='gameplay--choices--house'></div>
+
+        <div class='gameplay--choices--house'>
+
+        <div class='h-border--parent'>
+          <div class='house--border-win is--hidden'></div>
+          <div class='user--border-win is--hidden'></div>
+        </div>
+
+
+          <div class='house-parent is--hidden '>
+            <div class='house--item-scissors'>
+              <img src="images/icon-scissors.svg" alt="scissors-logo">
+            </div>
+          </div>
+
+          <div class='house-parent is--hidden'>
+            <div class='house--item-paper is--hidden'>
+              <img src="images/icon-paper.svg" alt="paper-logo">
+            </div>
+          </div>
+
+          <div class='house-parent is--hidden'>
+            <div class='house--item-rock'>
+              <img src="images/icon-rock.svg" alt="rock-logo">
+            </div>
+          </div>
+
+          <div class='house-parent is--hidden'>
+            <div class='house--item-lizard'>
+              <img src="images/icon-lizard.svg" alt="lizard-logo">
+            </div>
+          </div>
+
+          <div class='house-parent is--hidden'>
+            <div class="house--item-spock">
+              <img src="images/icon-spock.svg" alt="spock-logo">
+            </div>
+          </div>
+
+        </div>
       </div>
-      <div class='gameplay--round--outcome'></div>
-      <div class='gameplay--play--again is--hidden is--visible'><button class='gameplay--play--again--button'>PLAY AGAIN</button></div>
+
+      <div class='round-outcome--parent is--hidden'>
+        <div class='gameplay--round-outcome'></div>
+        <div class='user-choice--text'>YOU PICKED</div>
+        <div class='house-choice--text'>THE HOUSE PICKED</div>
+      </div>
+
+      <div class='gameplay--play-again is--hidden'>
+        <div class='gameplay--play--again--button'>PLAY AGAIN</div>
+      </div>
     </div>
+
+
   </main>
+
   <div class='rules-info--container'>
     <div class='rules-info--heading'>RULES</div>
     <div class='rules-info--content'>
@@ -68,10 +118,13 @@
       <img class='info-close__image'src='images/icon-close.svg' alt='exit button'>
     </div>
   </div>
+
   <div class='main-footer'>
+
     <div class='rules-button-container'>
       <div class='rules--button button'>RULES</div>
     </div>
+
   </div>
 
 
@@ -82,10 +135,8 @@
     You Lose
 
     Play Again -->
-  <div class="attribution">
-    Challenge by <a class='footer-link'href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a class='footer-link'href="#">JfuseCodes</a>.
-  </div>
+
+
 
 </body>
 </html>
