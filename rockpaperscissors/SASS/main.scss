@@ -60,7 +60,7 @@ body{
         img{
           width:60px;
           height:60px;
-          @media(min-width){
+          @media(min-width:$desktop-screen){
             width:90px;
             height:90px;
           }
