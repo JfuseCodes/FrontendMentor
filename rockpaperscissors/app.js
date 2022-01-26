@@ -40,7 +40,7 @@ const appStart = () => {
   rulesInfo.classList.add('is--hidden');
   gameplayContainer.classList.add('is--hidden');
   playAgainButton.classList.add('is--hidden');
-  scoreNumber.textContent = localStorage.getItem('score');
+  scoreNumber.textContent = localStorage.setItem('score','0');
 };
 
 const removeActiveChoice = () => {
