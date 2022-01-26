@@ -13,7 +13,7 @@ This web application is an extension of the original rock paper scissors game. T
 <b>JAVASCRIPT</b>
 
 ## IMAGES:
-![Alt Text](https://gfycat.com/dependablesinfulargali)
+![Alt Text](https://github.com/JfuseCodes/FrontendMentor/blob/main/rockpaperscissors/rps-game.gif)
 
 ## CHALLENGES:
 
