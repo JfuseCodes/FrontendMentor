@@ -361,6 +361,7 @@
 };
 @mixin house-choice--position(){
   @include size-mq($mobile-phones,$width:32px,$height:32px,$border-width:16px,$padding:42px );
+  
   @include size-mq($desktops,$width:160px,$height:160px,$border-width:40px,$padding:40px );
 
   @include positions-mq($mobile-phones,$position:null, $inset: -20px 0 0 125px );
