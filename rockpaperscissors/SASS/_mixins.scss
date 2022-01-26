@@ -13,9 +13,9 @@
       width:$width;
       height:$height;
       z-index:$z-index;
-    }
-  }
-}
+    };
+  };
+};
 
 @mixin scorekeeperbox {
   @include center-flex(flex,space-between,center);
@@ -41,7 +41,7 @@
   color: $color;
   font-size:$font-size;
   font-weight: $font-weight;
-}
+};
 
 @mixin img-mq($break-point, $padding:0, $width:auto, $height:auto){
   @for $i from 0 to length($break-point){
@@ -49,16 +49,16 @@
       padding: $padding $padding;
       width:$width;
       height:$height;
-    }
-  }
-}
+    };
+  };
+};
 
 @mixin logo-img {
   @include center-flex(flex,center,center);
   @include img-mq($mobile-phones,$width:55px);
   @include img-mq($tablets, $width:65px);
   @include img-mq($desktops, $width:80px);
-}
+};
 
 @mixin modal-mq($break-point,$top:0,$left:0,$width:100%,$height:100%,$text-align:center,$padding:0){
   @for $i from 0 to length($break-point){
@@ -69,9 +69,9 @@
       height:$height;
       text-align:$text-align;
       padding:$padding;
-    }
-  }
-}
+    };
+  };
+};
 
 @mixin rules-img(){
   @include center-flex(flex,center,center);
@@ -82,7 +82,7 @@
   @include modal-mq($mobile-phones,$height:100px,$padding: 25px 0 0 0);
   @include modal-mq($tablets,$height:50px,$padding:25px 0 0 0);
   @include modal-mq($desktops, $width:0, $height:40px, $text-align:left, $padding:25px 25px 5px 6%);
-}
+};
 @mixin close-button-position($break-point,$display:block,$position:absolute,$left:0,$right:0,$top:0,$bottom:0,$padding:0,){
   @for $i from 0 to length($break-point){
     @media(min-width: #{nth($break-point, $i + 1)}){
@@ -92,13 +92,13 @@
       right:$right;
       bottom:$bottom;
       top:$top;
-    }
-  }
-}
+    };
+  };
+};
 @mixin rules-info-close(){
   @include close-button-position($mobile-phones,$display:block, $top:90%);
   @include close-button-position($desktops,$display:block,$position:absolute, $top:5%, $left:75%);
-}
+};
 
 @mixin rules-info-modal(){
   background-color:$modal-clr;
@@ -111,10 +111,10 @@
 
   @include modal-mq($mobile-phones);
   @include modal-mq($tablets,$width:45%,$height:455px,$left:28%,$top:130px);
-}
+};
 @mixin rules-info-modal-desktop(){
   @include modal-mq($desktops,$width:27%,$height:350px,$left:36%,$top:110px);
-}
+};
 
 // FOOTER && RULE INFORMATION MODAL
 @mixin parent-mq($break-point,$bottom:null, $position:null, $width:null, $inset:null,){
@@ -124,12 +124,12 @@
       width:$width;
       inset:$inset;
       bottom:$bottom;
-    }
-  }
-}
+    };
+  };
+};
 @mixin main-footer(){
-  @include parent-mq($mobile-phones, $position:absolute, $width:99%, $bottom:0px)
-  @include parent-mq($tablets, $position:absolute, $width:100%, $bottom:25px)
+  @include parent-mq($mobile-phones, $position:absolute, $width:99%, $bottom:0px);
+  @include parent-mq($tablets, $position:absolute, $width:100%, $bottom:25px);
 }
 
 @mixin button-position($break-point,$position:null,$inset:null,$display:null,$justify-content:null,$align-items:null,$padding:0,$text-align:null, $tr-1:null,$tr-bc:null,$tr-trns:null, $tr-bg:null){
@@ -148,10 +148,10 @@
           color:$dark-text;
           background-color:$bright-clr;
           transform:translateY(-5px);
-        }
-      }
-    }
-  }
+        };
+      };
+    };
+  };
 };
 
 @mixin rules-button--placement {
@@ -159,12 +159,11 @@
   @include button-position($mobile-phones, $position:relative, $inset: 400px 0 0 0);
   @include button-position($tablets,$position:relative, $inset: 400px 0 0 0,$padding: 0px 0 0 0);
   @include button-position($desktops, $position:relative, $inset: 450px 0 0 500px, $padding: 0 0 0 0, $tr-1:.5s,$tr-bc:.5s,$tr-trns:.5s,$tr-bg:.5s);
-
-}
+};
 
 @mixin rules-button--styling(){
   @include button-mq($mobile-phones, $width:5rem, $border: 1px solid $bright-clr,$color:$bright-clr,$padding:.4rem .2rem, $font-size:.55rem, $font-weight:525, $cursor:pointer);
-}
+};
 
 //MAIN
 @mixin button-mq($break-point, $width, $border:null, $border-radius:8px, $color:$dark-text, $text-align:center, $padding:0, $font-size:1rem,$font-weight:null, $cursor:null,$background-color:null,$tr-1:null,$tr-bc:null,$tr-trns:null,$tr-bg:null ){
@@ -181,14 +180,14 @@
       cursor: $cursor;
       background-color: $background-color;
       letter-spacing: .01rem;
-    }
+    };
     &:hover{
       @media(min-width:$desktop-screen){
         transform:translateY(-5px);
-      }
-    }
-  }
-}
+      };
+    };
+  };
+};
 
 @mixin play-again-button(){
   @include button-mq($mobile-phones, $width:6rem, $border: 3px solid $bright-clr, $background-color: $bright-clr, $color: $dark-text, $font-size:.6rem, $padding: .4rem .2rem, $font-weight:525,);
@@ -201,14 +200,14 @@
       padding:$padding;
       position: $position;
       inset: $inset;
-    }
-  }
-}
+    };
+  };
+};
 @mixin play-again-button--placement(){
   @include play-again-mq($mobile-phones, $position:relative, $inset: 320px 0 0 0);
   @include play-again-mq($tablets, $position:relative, $inset: 320px 0 0 0);
   @include play-again-mq($desktops, $position:relative, $inset: 220px 0 0 0);
-}
+};
 //PENTAGON
 @mixin main-size-mq($break-point, $position:null,$inset:null,$width:auto,$height:auto,$margin:auto, $padding:0,$z-index:null,$background-image:null){
   @for $i from 0 to length( $break-point ){
@@ -220,8 +219,8 @@
       position:$position;
       inset:$inset;
       z-index: $z-index;
-    }
-  }
+    };
+  };
 };
 
 @mixin game--container(){
@@ -230,14 +229,14 @@
   @include main-size-mq($mobile-phones,$width:250px,$height:0,$padding: 0px 0 0 0);
   @include main-size-mq($tablets, $width:400px,$height:0,$padding:0px 0 0px 0);
   @include main-size-mq($desktops, $width:400px,$height:0,$padding: 0px 0 0px 0);
-}
+};
 
 @mixin pentagon--sizing(){
   z-index:0;
   @include main-size-mq($mobile-phones, $position:relative, $inset: -20px 0 0 0 , $width:200px, $z-index:0,$height:400px );
   @include main-size-mq($tablets, $position: relative, $inset: 50px 0 0 0, $width:240px);
   @include main-size-mq($desktops, $position:relative, $inset: 60px 0 0 0 , $width:300px);
-}
+};
 
 @mixin size-mq($break-point,$width,$height,$border-width,$padding:null,$tr-1:null, $tr-bc:null, $tr-trns:null ){
   @for $i from 0 to length($break-point){
@@ -247,18 +246,18 @@
       border-width:$border-width;
       padding:$padding;
       transition: $tr-1, border-color $tr-bc,  transform $tr-trns;
-    }
-  }
-}
+    };
+  };
+};
 
 @mixin positions-mq($break-point,$position:null,$inset:null){
   @for $i from 0 to length( $break-point){
     @media(min-width: #{nth($break-point, $i+1)}){
       inset: $inset;
       position:$position;
-    }
-  }
-}
+    };
+  };
+};
 
 @mixin game-choice-position($names){
   @each $name in $names {
@@ -267,36 +266,36 @@
         @include positions-mq($mobile-phones, $inset: -48px 0 0 215px);
         @include positions-mq($tablets, $inset: -85px 0 0 260px );
         @include positions-mq($desktops, $inset: -80px 0 0 270px );
-      }
-    }
+      };
+    };
     @if $name == paper{
         .game--item-#{$name}{
           @include positions-mq($mobile-phones, $inset: 37px 0 0 220px);
           @include positions-mq($tablets, $inset: 15px 0 0 260px );
           @include positions-mq($desktops, $inset: 40px 0 0 280px );
-        }
-      }
+        };
+      };
     @if $name == rock{
       .game--item-#{$name}{
         @include positions-mq($mobile-phones, $inset:155px 0 0 70px);
         @include positions-mq($tablets, $inset: 155px 0 0 80px );
         @include positions-mq($desktops, $inset: 210px 0 0 80px );
-      }
-    }
+      };
+    };
     @if $name == lizard{
       .game--item-#{$name}{
         @include positions-mq($mobile-phones, $inset: 155px 0 0 -176px);
         @include positions-mq($tablets, $inset: 155px 0 0 -200px );
         @include positions-mq($desktops, $inset: 210px 0 0 -220px );
-      }
-    }
+      };
+    };
     @if $name == spock{
       .game--item-#{$name}{
         @include positions-mq($mobile-phones, $inset: 39px 0 0 -320px);
         @include positions-mq($tablets, $inset: 15px 0 0 -380px);
         @include positions-mq($desktops, $inset: 40px 0 0 -420px );
-      }
-    }
+      };
+    };
   };
 };
 
@@ -332,9 +331,9 @@
       &:hover{
         @media screen and (min-width:$desktop-screen){
           transform: translateY(-20px);
-        }
-      }
-    }
+        };
+      };
+    };
   };
 };
 
@@ -353,11 +352,12 @@
       z-index:1;
       cursor:pointer;
 
-      @include size-mq($mobile-phones,2px,4px,12px,$padding:40px);
-      @include size-mq($tablets, 12px, 12px, 18px);
-      @include size-mq($desktops,$width:15px,$height:15px,$border-width:20px,);
-    }
-  }
+// @include size-mq($mobile-phones,2px,4px,12px,$padding:40px);
+// @include size-mq($tablets, 12px, 12px, 18px);
+// @include size-mq($desktops,$width:15px,$height:15px,$border-width:20px,);
+
+};
+  };
 };
 @mixin house-choice--position(){
   @include size-mq($mobile-phones,$width:32px,$height:32px,$border-width:16px,$padding:42px );
@@ -385,9 +385,9 @@
       z-index:$z-index;
       opacity: $opacity;
       padding:$padding;
-    }
-  }
-}
+    };
+  };
+};
 @mixin house--winner(){
   @include highlight-winner($mobile-phones, $height:12px, $width: 12px, $box-shadow1: 0 0 0 55px $light-one, $box-shadow2: 0 0 0 80px $light-two, $box-shadow3:0 0 0 110px $light-three, $inset: 80px 0 0 150px, $padding:40px, $opacity: .5);
   @include highlight-winner($tablets, $height:12px, $width: 12px, $box-shadow1: 0 0 0 40px $light-one, $box-shadow2: 0 0 0 60px $light-two, $box-shadow3:0 0 0 80px $light-three, $inset: 80px 0 0 150px, $z-index:-1, $opacity: .5);
@@ -409,21 +409,21 @@
       font-size:$font-size;
       font-weight: $font-weight;
       color:$color;
-    }
-  }
-}
+    };
+  };
+};
 @mixin outcome-text(){
   @include text-mq($mobile-phones, $inset: 260px 0 0 0, $text-align:center, $font-size:1.4rem,$font-weight:600);
   @include text-mq($tablets, $inset: 260px 0 0 0, $text-align:center, $font-size:1.5rem,$font-weight:600)
   @include text-mq($desktops, $inset: 145px 0 0 0, $text-align:center, $font-size:1.8rem,$font-weight:600)
-}
+};
 @mixin user-choice-text(){
   @include text-mq($mobile-phones, $inset:160px 0 0 -45px, $text-align:left, $font-size:.4rem, $font-weight:600);
   @include text-mq($tablets, $inset:-35px 0 0 -20px, $text-align:left, $font-size:.4rem, $font-weight:600);
   @include text-mq($desktops, $inset:-55px 0 0 -280px, $text-align:left, $font-size:.6rem, $font-weight:600);
-}
+};
 @mixin house-choice-text(){
   @include text-mq($mobile-phones, $inset:145px 0 0 60px, $text-align:right, $font-size:.4rem, $font-weight:600);
   @include text-mq($tablets, $inset:-50px 0 0 60px, $text-align:right, $font-size:.4rem, $font-weight:600);
   @include text-mq($desktops, $inset:-75px 0 0 375px, $text-align:left, $font-size:.6rem, $font-weight:600);
-}
+};
