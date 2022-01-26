@@ -4,6 +4,8 @@
 
 This web application is an extension of the original rock paper scissors game. This version adds on two more hand signals- Lizard and Spock for a total of 5 game choices.
 
+Play it here at https://sys-game.netlify.app
+
 ## BUILT WITH:
 
 <b>HTML</b>
