@@ -1,0 +1,26 @@
+$s:0;
+
+
+//Primary Colors
+$bright-blue: hsl(220,98%,61%);
+$check-bg: linear-gradient(hsl(192, 100%, 67%),hsl(280,87%,65%));
+
+//Neutral Colors
+
+//LIGHT THEME
+$vl--gray: hsl(0,0%, 98%);
+$vl--grayish-blue:hsl(236, 33%, 92%);
+$l--grayish-blue: hsl(233, 11%, 84%);
+$d--grayish-blue: hsl(236, 9%, 61%);
+$vd--grayish-blue: hsl(235, 19%, 35%);
+
+//DARK THEME
+$vd--blue: hsl(235, 21%, 11%);
+$vd--des-blue: hsl(235, 24%, 19%);
+$l--grayish-blue: hsl(234, 39%, 85%);
+$l--grayish-blue--hover: hsl(236, 33%, 92%);
+$d--grayish-blue: hsl(234, 11%, 52%);
+$vd--grayish-blue--one: hsl(233, 14%, 35%);
+$vd--grayish-blue--two: hsl(237, 14%, 26%);
+
+$font-size: 18px;
