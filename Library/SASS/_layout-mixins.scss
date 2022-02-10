@@ -1,0 +1,124 @@
+@mixin image-size($break-point: $mobile-screen,$screen: 'mobile', $background-repeat:no-repeat,$theme-color:'light',$background-position:null,$height:200px,$width:100%){
+  @for $i from 0 to length($break-point){
+    @media(min-width: #{nth($break-point, $i +1)}){
+      background-image: url('../images/bg-#{$screen}-#{$theme-color}.jpg');
+      background-repeat:$background-repeat;
+      background-position: $background-position;
+      width:$width;
+      height:$height;
+      background-size:cover;
+    }
+  }
+};
+@mixin flex-content($break-point: $mobile-screen,$display:null, $flex-direction:null,$justify-content:null, $align-content:null, $align-items:null,$font-size:1rem,$font-weight:null,$width:null,$height:null){
+  @for $i from 0 to length($break-point){
+    @media(min-width: #{nth($break-point, $i+1)}){
+      display:$display;
+      flex-direction: $flex-direction;
+      justify-content:$justify-content;
+      align-items: $align-items;
+      align-content: $align-content;
+      font-size:$font-size;
+      font-weight:$font-weight;
+      width:$width;
+      height:$height;
+
+    }
+  }
+}
+
+@mixin positioning($break-point:$mobile-screen,$position: absolute,$width:null,$height:null, $top:0, $right:0, $bottom:0, $left:0,$border-width:null, $border-style:null,$padding:null,$max-width:null){
+  @for $i from 0 to length($break-point){
+    @media(min-width: #{nth($break-point, $i+1)}){
+      position: $position;
+      width: $width;
+      max-width:$max-width;
+      height:$height;
+      padding:$padding;
+      inset: $top $right $bottom $left;
+      border-style:$border-style;
+      border-width:$border-width;
+
+    }
+  }
+}
+@mixin max-width-positioning($break-point:$mobile-screen,$position: absolute,$width:null,$height:null, $top:0, $right:0, $bottom:0, $left:0,$border-width:null, $border-style:null,$padding:null,$max-width:null){
+  @for $i from 0 to length($break-point){
+    @media(max-width: #{nth($break-point, $i+1)}){
+      position: $position;
+      width: $width;
+      max-width:$max-width;
+      height:$height;
+      padding:$padding;
+      inset: $top $right $bottom $left;
+      border-style:$border-style;
+      border-width:$border-width;
+
+    }
+  }
+}
+
+
+@mixin table-layout-max($break-point:$mobile-screen,$position:null,$top:null,$bottom:bottom,$right:right,$left:left,$border-radius:8px,$padding:null,$width:null,$text-align:center){
+  @for $i from 0 to length($break-point){
+    @media(max-width: #{nth($break-point, $i+1)}){
+      position:$position;
+      top:$top;
+      bottom:$bottom;
+      right:$right;
+      left:$left;
+      width:$width;
+      border-radius:$border-radius;
+      text-align:$text-align;
+      padding:$padding;
+
+    }
+  }
+}
+@mixin table-layout-min($break-point:$mobile-screen,$position:null,$top:null,$bottom:bottom,$right:right,$left:left,$border-radius:8px,$padding:null,$width:null,$font-size:null,$font-weight:null,$text-align:null,$cursor:null){
+  @for $i from 0 to length($break-point){
+    @media(min-width: #{nth($break-point, $i+1)}){
+      position:$position;
+      top:$top;
+      bottom:$bottom;
+      right:$right;
+      left:$left;
+      width:$width;
+      border-radius:$border-radius;
+      text-align:$text-align;
+      padding:$padding;
+      font-size:$font-size;
+      font-weight:$font-weight;
+      cursor:$cursor;
+
+    }
+  }
+}
+
+@mixin general-checkmark-styling($border:null,$width:null, $height:null,
+                                $position:null, $display:null, $justify-content:null,$align-items:null,$padding:null,$background:null,$background-color:null,
+                                $border-radius:null, $cursor:null, $top:null,$right:null,$bottom:null,$left:null,$content:"",$border-top:null,
+                                $border-right:null,$border-bottom:null,$border-left:null,$transform:null,$opacity:null,$visibility:null,){
+  border: $border;
+  width:$width;
+  height:$height;
+  position:$position;
+  display:$display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  padding:$padding;
+  background:$background;
+  background-color:$background-color;
+  border-radius:$border-radius;
+  cursor:$cursor;
+  top:$top;
+  right:$right;
+  bottom:$bottom;
+  left:$left;
+  content:$content;
+  border-top:$border-top; border-right:$border-right;
+  border-bottom:$border-bottom; border-left:$border-left;
+  transform:$transform;
+  opacity:$opacity;
+  visibility: $visibility;
+}

@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" class='light theme-transition'>
   <head>
     <meta charset="utf-8">
     <title>Library</title>
     <script src="app.js" charset="utf-8" defer></script>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="STYLES/main.css">
+
   </head>
   <body>
-    <header>
-      <div>
+    <header class='header__bg-image'>
+        <div class='content-parent'>
+          <div>
+            LIBRARY
+          </div>
 
-      </div>
-      <div>
-
-      </div>
+          <div class='theme-switch-container'>
+            <img src="images/icon-moon.svg" alt="moon button">
+            <img src='images/icon-sun.svg' alt='sun button'>
+          </div>
+        </div>
     </header>
 
     <main class='main'>
@@ -21,41 +26,30 @@
 
         <form class='form'>
           <div>
-            <label for="name">Book Name:</label>
-            <input type="text" name="" value="">
+            <input type="text" name="" value="" placeholder="Book name">
           </div>
 
           <div>
-            <label for="name">Author:</label>
-            <input type='text' name='' value=''>
+            <input type='text' name='' value='' placeholder="Author name">
           </div>
 
           <div>
-            <label for='name'>Number of Pages:</label>
-            <input type="text" name="" value="">
+            <input type="text" name="" value="" placeholder="number of pages">
           </div>
+          <div class='container'>
+            <div class='read-label'>
+              <label for='read'>Have you read it?</label>
+            </div>
+            <div class='round'>
+              <input type="checkbox" value='false' id="checkbox" />
+              <label for="checkbox"></label>
+            </div>
 
-          <div>
-            <button class='add--button'>+</button>
           </div>
 
         </form>
       </div>
 
-
-      <div class='book-list-container'>
-        <ul class='book-list'>
-
-        </ul>
-      </div>
-
-      <!-- All
-      Active
-      Completed
-
-      Clear Completed
-
-      Drag and drop to reorder list -->
     </main>
   </body>
 </html>

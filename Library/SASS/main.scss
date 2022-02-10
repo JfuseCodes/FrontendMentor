@@ -1,3 +1,191 @@
-html{
-  background-color:#eee;
+@import "variables";
+@import "mixins";
+@import "layout-mixins";
+@import "themes";
+@import "reset";
+
+html {
+  font-family: $font-fam;
+  font-size: $font-size;
+  body {
+    header {
+      @include flex-content($break-point: $mobile-screen,$display: flex,$justify-content: center,$align-items: center);
+      @include flex-content($break-point: $tablets-plus,$display: flex,$justify-content: center,$align-items: flex-start);
+      .content-parent {
+        @include flex-content($break-point: $mobile-screen,$display: flex,$justify-content: space-between,$align-items: flex-start,$font-size: 2.7rem,$font-weight: 700,$width: 90%,$height: 70px)
+          @include
+          flex-content(
+            $break-point: $tablets-plus,
+            $display: flex,
+            $justify-content: space-around,
+            $align-items: flex-end,
+            $font-size: 3.5rem,
+            $font-weight: 700,$width: 50%,$height: 120px
+          );
+      }
+      .theme-switch-container {
+        @include flex-content(
+          $break-point: $mobile-screen,
+          $display: flex,
+          $align-items: center,
+          $height: 55px
+        );
+        @include flex-content(
+          $break-point: $tablets-plus,
+          $display: flex,
+          $align-items: center,
+          $height: 70px
+        );
+      }
+    }
+
+    main {
+      @include flex-content($break-point: $mobile-screen, $display: flex, $font-size:1rem,$flex-direction: column, $justify-content: center, $align-items: center)
+      .form-container {
+        @include positioning($position: relative);
+        @include positioning($break-point:$tablets-plus, $position:relative, $top:-160px, $width:50%);
+        .form {
+          @include flex-content($display:flex, $justify-content:center, $flex-direction:column);
+          @include max-width-positioning($break-point:$tablets-plus - 0.01,$position: absolute, $top: 10px,$left: -165px,$width: 310px);
+          div{
+            input {
+              @include positioning($position:null,$height:20px, $border-style:solid,$border-width:.1px,$width:97.5%,$padding:8px);
+            }
+          }
+          .container {
+
+            @include general-checkmark-styling( $width:302.5px,$position:relative,$display:flex,$align-items:center,$padding:8px);
+            @media (min-width:375.1px){
+              @include general-checkmark-styling($width:97.5%);
+            }
+            .read-label{@include general-checkmark-styling($display:flex, $justify-content: center, $width:70%);}
+            .round {
+              @include general-checkmark-styling($position: relative, $width:20%);
+            }
+
+            .round label {
+              @include general-checkmark-styling($background-color:#fff, $border:1px solid #ccc, $border-radius: 50%, $cursor:pointer, $height:28px, $left:0, $position:absolute, $top:0,$width:28px);
+            }
+
+            .round label:after {
+              @include general-checkmark-styling($border:2px solid #fff, $border-top: none, $border-right:none,
+              $position:absolute,$height:6px,$left:7px,$opacity:0,$top: 8px, $transform: rotate(-45deg),$width: 12px)
+            }
+
+            .round input[type="checkbox"] {@include general-checkmark-styling($visibility: hidden); }
+
+            .round input[type="checkbox"]:checked + label { background: $check-bg;}
+
+            .round input[type="checkbox"]:checked + label:after {
+              opacity: 1;
+            }
+          }
+        }
+      }
+      table{
+        border-collapse:collapse;
+        td{vertical-align:middle;}
+      }
+      .book-list-container {
+        @include table-layout-max($break-point: $tablets-plus - 0.01,$position:relative, $top:100px,$width:97%);
+        @include table-layout-min($break-point:$tablets-plus,$position:relative,$top:-120px,$width:65%,$border-radius:4px);
+        .book-list {
+          @include table-layout-max($break-point: $tablets-plus - 0.01,$border-radius: 4px,);
+          @include table-layout-min($break-point:$tablets-plus, $border-radius: 4px, $width:100%);
+          th{
+            @include table-layout-max($break-point: $tablets-plus - 0.01,$width:5px);
+            @include table-layout-min($break-point:$tablets-plus,$width:10%,$font-weight:700,$text-align:left,$cursor:pointer);
+          }
+          td {
+            @include table-layout-max($break-point: $tablets-plus - 0.01,$padding:8px 2px 8px 2px,$border-radius:0);
+            @include table-layout-min($break-point:$tablets-plus,$padding:12px 2px 12px 2px, $border-radius:0,$font-size:85%,$text-align:center);
+          }
+        }
+      }
+    }
+  }
+}
+
+.light {
+  .header__bg-image {
+    @include image-size(
+      $screen: "mobile",
+      $theme-color: "light",
+      $background-position: center
+    );
+    @include image-size(
+      $break-point: $tablets-plus,
+      $screen: desktop,
+      $theme-color: light,
+      $height: 300px
+    );
+  }
+  header {  color: var($--theme-primary-text);}
+  body {
+    background-color: var(--theme-primary-background);
+    form{
+      .container,
+      input{
+        border:.1px solid var($--theme-secondary-text);
+        background-color: var(--theme-primary-text);
+      }
+    }
+    main{
+      .book-list-container{
+        border:.1px solid var(--theme-secondary-background);
+      }
+      table{
+        box-shadow: -10px 10px 20px var(--theme-secondary-background);
+        th{
+          border:1px solid var(--theme-secondary-background);
+        }
+        td{
+          border:1px solid var(--theme-secondary-background);
+        }
+      }
+    }
+  }
+}
+
+.dark {
+  header {
+    color: var($--theme-secondary-text);
+  }
+  .header__bg-image {
+    @include image-size(
+      $screen: "mobile",
+      $theme-color: "dark",
+      $background-position: center
+    );
+    @include image-size(
+      $break-point: $tablets-plus,
+      $screen: "desktop",
+      $background-position: top,
+      $theme-color: "dark",
+      $height: 300px
+    );
+  }
+  body {
+    background-color: var(--theme-primary-background);
+    color: var(--theme-secondary-text);
+    form{
+      .container,
+      input{
+        border:1px solid var($--theme-on-secondary-one);
+        background-color: var(--theme-secondary-background);
+      }
+    }
+    main{
+      .book-list-container{
+        border:1px solid var(--theme-secondary-background);
+      }
+      table{
+        border:1px solid var(--theme-secondary-background);
+        background-color: var(--theme-secondary-background);
+        th{border:1px solid var(--theme-on-secondary-one);
+        }
+        td{border:.1px solid var(--theme-on-secondary-one);}
+      }
+    }
+  }
 }

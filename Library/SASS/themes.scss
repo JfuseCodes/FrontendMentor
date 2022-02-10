@@ -1,0 +1,19 @@
+@import 'variables';
+@import 'mixins';
+
+:root.light{
+  @include spread-map($theme-map-light);
+}
+:root.dark{
+  @include spread-map($theme-map-dark);
+}
+
+@media (min-width:$tablets-plus){
+  :root.theme-transition,
+  :root.theme-transition * {
+    // transition: background-color 750ms !important;
+      transition:background-color 250ms,background-image 250ms, background-position 0s !important;
+      transition-delay:0s !important;
+
+  };
+}

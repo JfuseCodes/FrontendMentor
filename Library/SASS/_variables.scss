@@ -1,26 +1,42 @@
-$s:0;
-
-
+$mobile-screen: 0;
+$tablets-plus: 375.1px;
+$font-size: 18px;
 //Primary Colors
 $bright-blue: hsl(220,98%,61%);
-$check-bg: linear-gradient(hsl(192, 100%, 67%),hsl(280,87%,65%));
+$check-bg: linear-gradient(135deg,hsl(192, 100%, 67%),hsl(280,87%,65%));
+$primary-colors: $bright-blue, $check-bg;
 
-//Neutral Colors
+$--theme-primary-text: --theme-primary-text; //form text
+$--theme-secondary-text: --theme-secondary-text; //footer text when not active
+$--theme-secondary-text-active: --theme-secondary-active-text; //footer text when active
+$--theme-primary-background: --theme-primary-background; // document background
+$--theme-secondary-background: --theme-secondary-background; // form background
+$--theme-on-secondary-one: --theme-on-secondary-one; // dark theme color
+$--theme-on-secondary-two: --theme-on-secondary-two; // dark theme color
 
-//LIGHT THEME
-$vl--gray: hsl(0,0%, 98%);
-$vl--grayish-blue:hsl(236, 33%, 92%);
-$l--grayish-blue: hsl(233, 11%, 84%);
-$d--grayish-blue: hsl(236, 9%, 61%);
-$vd--grayish-blue: hsl(235, 19%, 35%);
+//CREATE THEME MAP 1
+$theme-map-light: (
+  $--theme-primary-background: hsl(0,0%, 98%),
+  $--theme-secondary-background: hsl(236, 33%, 92%),
+  $--theme-primary-text: hsl(0, 0%, 98%),
+  $--theme-secondary-text: hsl(236, 9%, 61%),
+  $--theme-secondary-text-active: hsl(235, 19%, 35%),
+);
 
-//DARK THEME
-$vd--blue: hsl(235, 21%, 11%);
-$vd--des-blue: hsl(235, 24%, 19%);
-$l--grayish-blue: hsl(234, 39%, 85%);
-$l--grayish-blue--hover: hsl(236, 33%, 92%);
-$d--grayish-blue: hsl(234, 11%, 52%);
-$vd--grayish-blue--one: hsl(233, 14%, 35%);
-$vd--grayish-blue--two: hsl(237, 14%, 26%);
+//CREATE THEME MAP 2
+$theme-map-dark: (
+  $--theme-primary-background: hsl(235, 21%, 11%),
+  $--theme-secondary-background: hsl(235, 24%, 19%),
+  $--theme-primary-text: hsl(234, 39%, 85%),
+  $--theme-secondary-text: hsl(236, 33%, 92%) ,
+  $--theme-secondary-text-active: hsl(234, 11%, 52%),
+  $--theme-on-secondary-one: hsl(233, 14%, 35%),
+  $--theme-on-secondary-two: hsl(237, 14%, 26%),
+);
 
-$font-size: 18px;
+/* FONTS */
+@font-face{
+  src: url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+  font-family:'Josefin Sans'
+};
+$font-fam: 'Josefin sans', sans-serif;
