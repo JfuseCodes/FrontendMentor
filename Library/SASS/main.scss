@@ -173,6 +173,7 @@ html {
       input{
         border:1px solid var($--theme-on-secondary-one);
         background-color: var(--theme-secondary-background);
+        color: var(--theme-secondary-text);
       }
     }
     main{
