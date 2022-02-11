@@ -302,63 +302,33 @@ inputs.forEach((input) => {
   });
 });
 
-// const updateFormOnEnter = () => {
-//   let theBookName = bookNameInput.value,
-//       theAuthorName = authorNameInput.value,
-//       thePageNumber = bookPageInput.value;
-//       // console.log(theBookName);
-//       // console.log(bookNameInput.value);
-//   inputs.forEach( input => {
-//     input.addEventListener('keypress', e => {
-//       if(e.key == "Enter"){
-//         e.preventDefault();
-//         if(theBookName && theAuthorName && thePageNumber){
-//           newBook = new Book(theBookName, theAuthorName, thePageNumber);
-//           addBookToLibrary(newBook);
-//           displayLibraryBooks(existingLibrary);
-//         }
-//         if(theBookName === '' && theAuthorName === '' && thePageNumber === ''){
-//           console.log('please fill out all fields... add error message');
-//           console.log(bookNameInput.value);
-//           console.log(bookNameInput);
-//           console.log(e);
-//         }
-//
-//       }
-//     })
-//   })
-//   // if(theBookName && theAuthorName && thePageNumber){
-//   //   for(let i = 0; i < inputs.length; i++){
-//   //     inputs[i].addEventListener('keypress', e => {
-//   //       // e.preventDefault();
-//   //       console.log(e.key);
-//   //     //   if (e.key === 13){
-//   //     //     newBook = new Book(theBookName, theAuthorName, thePageNumber);
-//   //     //     addBookToLibrary(newBook);
-//   //     //     displayLibraryBooks(existingLibrary);
-//   //     //     console.log('enter pressed')
-//   //     // };
-//   //
-//   //     })
-//   //   }
-//   // }
-// }
+// console.log(form.childNodes[7].childNodes[3].childNodes[1]);
+// // let checkBox = form.childNodes[7].childNodes[3].childNodes[1];
+// console.log(checkBox);
+checkBox.addEventListener('click', e => {
+  let newBook;
+  let theBookName = bookNameInput.value,
+    theAuthorName = authorNameInput.value,
+    thePageNumber = bookPageInput.value,
+    hasBeenRead = checkBox.value;
+  if(theBookName && theAuthorName && thePageNumber){
+    newBook = new Book(
+      theBookName,
+      theAuthorName,
+      thePageNumber,
+      hasBeenRead
+    );
+    addBookToLibrary(newBook);
+    displayLibraryBooks(existingLibrary);
+    [
+      bookNameInput.value,
+      authorNameInput.value,
+      bookPageInput.value,
+      checkBox.value,
+    ] = ["", "", "", false];
 
-// addBtn.addEventListener('click', e => {
-//   e.preventDefault();
-//   let newBook;
-//   let theBookName = bookNameInput.value,
-//       theAuthorName = authorNameInput.value,
-//       thePageNumber = bookPageInput.value;
-//   if(theBookName === '' && theAuthorName === '' && thePageNumber === ''){
-//     console.log('please fill out all fields... add error message');
-//   }
-//   if(theBookName && theAuthorName && thePageNumber){
-//     newBook = new Book(theBookName, theAuthorName, thePageNumber);
-//     addBookToLibrary(newBook);
-//     displayLibraryBooks(existingLibrary);
-//   }
-//   [bookNameInput.value,authorNameInput.value, bookPageInput.value] = ['','',''];
-// });
+  }
+
+})
 
 window.onload = appStart();
