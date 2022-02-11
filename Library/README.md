@@ -6,11 +6,10 @@ A modified version of a todo app but with books instead. The user can list a boo
 
 ![Design preview for web library app](./design/desktop-preview.jpg)
 
-![Design preview for web library app](./design/mobile-preview.jpg)
 
 ### Links
 
-[Demo the App]()
+[Demo the App](https://bookio.netlify.app)
 
 ## My process
 
