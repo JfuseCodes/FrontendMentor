@@ -18,13 +18,14 @@ html{
     .cancel-btn{
       color: $cancel-txt;
     }
-  }
-  footer{
-    .attribution { margin-top:75px; font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-    background-color: $doc-bg-clr;
 
   }
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a { color: hsl(228, 45%, 44%); }
+
 };
 
 html{
