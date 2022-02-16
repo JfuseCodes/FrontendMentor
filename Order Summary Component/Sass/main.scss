@@ -23,6 +23,7 @@ html{
     .attribution { margin-top:75px; font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
     background-color: $doc-bg-clr;
+
   }
 };
 
@@ -33,7 +34,7 @@ html{
   @include background-image($break-point:414px,$screen:'desktop');
   body{
 
-    height:100vh;
+    // height:100vh;
 
     main{
 
