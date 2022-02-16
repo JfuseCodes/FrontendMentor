@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700;900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&display=swap');
+// $font-family: 'Red Hat Display', san;
+
+@font-face {
+  font-family: 'Red Hat Display';
+  src: url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700;900&display=swap');
+};
+
+$mobile-screen: 0;
+$desktop: 1024px;
+
+$general-font: 'Red Hat Display';
+$f4: 400;
+$f7: 700;
+$f9: 900;
+
+$payment-bg: hsl(245, 75%, 52%); // change-link color too
+$cancel-txt: hsl(223, 47%, 23%);
+$cancel-btn: hsl(224, 23%, 55%);
+$card-clr:#FFFDFA;
+$doc-bg-clr: #E0E8FE;
+$body-text-clr: hsl(224, 23%, 55%); // price tag too
+$plan-container-clr: hsl(225, 100%, 98%);
+$attr-clr: hsl(228, 45%, 44%);

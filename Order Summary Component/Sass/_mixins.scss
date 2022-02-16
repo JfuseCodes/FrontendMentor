@@ -1,0 +1,69 @@
+//general mixins
+
+@mixin general-button-styling($break-point: $mobile-screen,$bg-color:null, $bdr-clr:null,$clr:null, $effect:null, $action:null, $px:null,$height:null,$width:null,$border-radius:null,$font-weight:null,$font-size:null, $border-width:null, $border-style:null, $border-color:null,$bx-shadow:null){
+  @for $i from 0 to length($break-point){
+    @media(min-width: #{nth($break-point, $i + 1)}){
+      background-color: $bg-color;
+      // border: $border- solid $bdr-clr;
+      border-width:$border-width;
+      border-style:$border-style;
+      border-color:$border-color;
+      color: $clr;
+      height:$height;
+      width:$width;
+      border-radius:$border-radius;
+      font-weight: $font-weight;
+      font-size: $font-size;
+      cursor:pointer;
+      box-shadow:$bx-shadow;
+    }
+    &:hover{
+      cursor:pointer;
+      transform: $action();
+    }
+  }
+}
+
+@mixin container-positioning($break-point: $mobile-screen,$position:null, $display:null, $width:null, $height:null,$margin:null, $margin-top:null, $margin-bottom:null, $margin-left:null, $margin-right:null, $border-radius:null, $flex-direction:null, $text-align:null, $bg-color:null, $padding:null, $font-sz:null, $font-weight:null, $color:null, $border-clr:null,$btlr:null, $btrr:null,$justify-content:null, $align-items:null,$border-width:null, $border-style:null, $border-color:null){
+  @for $i from 0 to length($break-point){
+    @media(min-width: #{nth($break-point, $i + 1)}){
+      position:$position;
+      display:$display;
+      width:$width;
+      margin:$margin;
+      margin-top:$margin-top;
+      margin-right:$margin-right;
+      margin-bottom:$margin-bottom;
+      margin-left:$margin-left;
+      border-radius:$border-radius;
+      border-top-left-radius: $btlr;
+      border-top-right-radius: $btrr;
+      flex-direction:$flex-direction;
+      text-align:$text-align;
+      background-color:$bg-color;
+      padding: $padding;
+      font-size:$font-sz;
+      font-weight:$font-weight;
+      color: $color;
+      border-width: $border-width;
+      border-style:$border-style;
+      border-color: $border-color;
+      // border:2px solid $border-clr;
+      justify-content: $justify-content;
+      align-items: $align-items;
+    }
+  }
+}
+
+@mixin background-image($break-point:$mobile-screen, $screen:'mobile',$bg-position:null){
+  @for $i from 0 to length($break-point){
+    @media(min-width: #{nth($break-point, $i + 1)}){
+      background-image: url('../images/pattern-background-#{$screen}.svg');
+      background-repeat:no-repeat;
+      // background-size: cover;
+      // width:100%;
+
+      background-position: $bg-position;
+    }
+  }
+}

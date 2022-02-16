@@ -1,0 +1,114 @@
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+
+html{
+  font-size:16px;
+  font-family: $general-font;
+}
+//general styling
+html{
+  main{
+    .body-p{
+      font-size:16px;
+    }
+    .payment-btn{
+      @include general-button-styling($border-width:2px, $border-color: $payment-bg, $border-style: solid,$bg-color: $payment-bg,$clr: #FFFFFF, $action: translateY(-2.5px),$bx-shadow:0 10px 30px -1em hsl(245, 75%, 52%));
+    }
+    .cancel-btn{
+      color: $cancel-txt;
+    }
+  }
+  footer{
+    .attribution { margin-top:75px; font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    background-color: $doc-bg-clr;
+  }
+};
+
+html{
+  background-color: $doc-bg-clr;
+  @include background-image($screen:'mobile',$bg-position:'top');
+  // @include background-image($break-point:$desktop,$screen:'desktop');
+  @include background-image($break-point:414px,$screen:'desktop');
+  body{
+
+    height:100vh;
+
+    main{
+
+      @include container-positioning($bg-color: $card-clr,$width:85vw, $position: relative, $margin:auto, $border-radius: 16px, $display: flex, $flex-direction: column, $text-align: center,$align-items:center, $margin-top:69px);
+      @include container-positioning($break-point:$desktop,$bg-color: $card-clr,$width:50vw, $position: relative, $margin:auto, $border-radius: 16px, $display: flex, $flex-direction: column, $text-align: center,$align-items:center, $margin-top:69px);
+
+      header{
+        .banner-container{
+          @include container-positioning($width:85vw,$margin:auto);
+          @include container-positioning($break-point:$desktop,$width:50vw,$margin:auto);
+
+        }
+        img{
+          @include container-positioning($width:85vw, $btrr: 16px, $btlr:16px);
+          @include container-positioning($break-point:$desktop,$width:50vw, $btrr: 16px, $btlr:16px);
+
+        }
+      }
+      .heading-container{
+
+        @include container-positioning($width:85vw, $padding: 20px 0 20px 0, $font-sz:20px, $font-weight:900);
+        @include container-positioning($break-point:$desktop,$width:50vw, $padding: 20px 0 20px 0, $font-sz:20px, $font-weight:900);
+
+      }
+
+      .body-p-container{
+        @include container-positioning($color: $body-text-clr, $padding: 0 34px 18px 34px, $font-weight: 400, $text-align: center);
+        @include container-positioning($break-point:$desktop,$color: $body-text-clr, $padding: 0 120px 18px 120px, $font-weight: 400, $text-align: center)
+
+      }
+      .plan-container{
+        @include container-positioning($border-width:2px, $border-style:solid, $border-color:$plan-container-clr, $bg-color:$plan-container-clr, $border-radius:10px, $width:70vw, $display:flex, $justify-content: space-between, $align-items: center, $margin-bottom:16px);
+        @include container-positioning($break-point:$desktop,$border-width:2px, $border-style:solid, $border-color:$plan-container-clr, $bg-color:$plan-container-clr, $border-radius:10px, $width:35vw, $display:flex, $justify-content: space-between, $align-items: center, $margin-bottom:16px);
+
+        .music-img-container,
+        .plan-para,
+        .change-link{
+          @include container-positioning($padding: 13px 0 13px 0);
+          @include container-positioning($break-point:$desktop, $padding: 13px 0 13px 0);
+
+        }
+
+        .plan-para {
+          padding-right: 50px;
+
+        }
+
+        .change-link{
+          @include container-positioning($padding:0 16px 0 0, $font-sz:12px, $font-weight:$f7, $color:$payment-bg);
+        }
+
+        .plan-text{
+          @include container-positioning($font-weight:$f7, $font-sz:14px, $text-align:left,$padding: 0 0 0 20px);
+        }
+        .price-tag{
+          @include container-positioning($color:$body-text-clr, $font-sz: 14px,$padding: 0 0 0 20px);
+        }
+      }
+
+      .payment-btn-container{
+        @include container-positioning($margin-bottom:25px);
+          .payment-btn{
+            // @include general-button-styling($border-width:2px, $border-style:solid, $border-color: $card-clr, $bg-color:$card-clr, $font-weight:$f7, $font-size: 14px);
+            @include general-button-styling($height:48px, $border-radius: 10px, $width:70vw,)
+            @include general-button-styling($break-point:$desktop,$height:48px, $border-radius: 10px, $width:35vw,)
+
+          }
+      }
+
+      .cancel-btn-container{
+        @include container-positioning($margin-bottom:25px);
+        .cancel-btn{
+          @include general-button-styling($border-width:2px, $border-style:solid, $border-color:$card-clr,$bg-color:$card-clr, $clr:$cancel-btn, $font-weight:700, $font-size:14px);
+        }
+      }
+    }
+  }
+}
