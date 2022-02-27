@@ -5,18 +5,22 @@
 This is a simple project that displays what a user would view if they plan to purchase a product
 or a service.Usually it is the precursor to a form requiring payment information.
 
+### Links
+
+[Check it out here](https://sumcard.netlify.app)
+
 ## TECHNOLOGIES USED:
 
 <b>HTML:</b>
 
  -Semantic HTML Markup
- 
+
 <b>CSS:</b>
 
  -Custom properties
- 
+
  -Flexbox
- 
+
  -Mobile-first workflow
 
 ## IMAGES:

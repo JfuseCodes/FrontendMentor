@@ -4,6 +4,8 @@
 ## OVERVIEW
 Another simple project used for marketing whose main point is showing numbers or in more technical terms- stats.
 
+[Preview the Site](https://statsheet.vercel.app/)
+
 ## TECHNOLOGIES USED:
 
 <b>HTML:</b>

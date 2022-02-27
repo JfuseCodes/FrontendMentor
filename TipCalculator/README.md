@@ -4,6 +4,10 @@
 ## OVERVIEW
 A responsive tip calculator with validation.
 
+### Links
+
+[Calculate your tips here](https://tippee.vercel.app)
+
 ## TECHNOLOGIES USED:
 
 <b>HTML:</b>
