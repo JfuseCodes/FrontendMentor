@@ -1,0 +1,45 @@
+// the switch - box around the slider
+@import '../misc/variables';
+
+@mixin switch(){
+    input {
+      
+      @include free-for-all-switch($box-sizing: border-box, $position:relative, $display:flex, $width: 327px, $height: 205px, $margin: 50px auto, $border: 5px solid $primary-bg-two, $border-radius: 15px, $cursor: pointer, $bg: $primary-bg-two, $box-shadow: 0 8px 0px $primary-bg-shadow,);
+      @include free-for-all-switch($break-point: $tablet,$width: 460px,);
+      // @include free-for-all-switch($break-point: $desktop, $width: 460px)
+        -webkit-appearance: none;
+      }
+      input:before{
+        @include free-for-all-switch($border-tlr:15px, $border-blr: 15px);   
+      }
+      input:after{
+        @include free-for-all-switch($border-trr: 15px, $border-brr: 15px);
+      }
+
+      input:after,
+      input:before {
+        @include free-for-all-switch($box-sizing: border-box, $position: absolute, $inset: 64px 0 5px 0, $width: 155px, $height: 74px, $border: 5px solid, $text-align: center, $font-size: 48px);
+        // @include free-for-all-switch($break-point: $tablet,$width: 412px )
+        transition: all 0.3s ease-out;
+      }
+
+      input:before {
+        @include free-for-all-switch($content: "x", $font-weight: 850, $border-color: $secondary-button-two-active, $bg: $secondary-button-two-active, $opacity: 1, $font-color:$primary-bg-one);
+        @include free-for-all-switch($break-point: $tablet, $width:211px);
+
+        @media(min-width: $mobile){ left: 5px; }
+        @media(min-width: $tablet){ left:24px; }
+      }
+  
+      input:after {
+        @include free-for-all-switch($content: "o",$font-weight: 850, $border-color: $primary-bg-one, $font-color: $secondary-button-two-active, $bg: $primary-bg-one, $bg-size: contain);
+        @include free-for-all-switch($break-point: $tablet, $width:211px);
+
+        @media(min-width: $mobile){ right: 5px; }
+        @media(min-width: $tablet){ right:24px; };
+        left: auto;
+      };
+      
+      input:checked:after { @include free-for-all-switch($opacity: 1, $border-color: $secondary-button-two-active, $font-color: $primary-bg-one, $bg: $secondary-button-two-active ); }
+      input:checked:before { @include free-for-all-switch($font-color: $secondary-button-two-active, $bg: $primary-bg-one, $border-color: $primary-bg-one); }
+}

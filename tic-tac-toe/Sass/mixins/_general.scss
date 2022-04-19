@@ -1,0 +1,89 @@
+@mixin free-for-all($break-point:$mobile, $position:null,$inset:null,$text-align:null,$margin:null,$display:null, $justify-content: null, $align-items:null, $flex-direction:null, $height:null, $width:null, $min-height:null, $min-width:null, $max-height:null, $max-width:null, $border: null, $border-radius:null,$cursor:null, $font-weight:null, $font-size:null,$line-height:null, $letter-spacing:null, $font-color: null, $bg:null, $bg-size: null, $box-shadow: null, $padding:null ){
+    @for $i from 0 to length($break-point){
+        @media(min-width: #{nth($break-point, $i + 1)}){
+            position: $position;
+            inset: $inset;
+            margin:$margin;
+            display: $display;
+            justify-content: $justify-content;
+            align-items: $align-items;
+            flex-direction: $flex-direction;
+            height: $height;
+            width: $width;
+            min-height: $min-height;
+            min-width: $min-width;
+            max-height: $max-height;
+            max-width:$max-width;
+            border: $border;
+            border-radius: $border-radius;
+            text-align: $text-align;
+            cursor: $cursor;
+            font-weight: $font-weight;
+            font-size: $font-size;
+            font-color: $font-color;
+            letter-spacing: $letter-spacing;
+            line-height: $line-height;
+            background: $bg;
+            background-size: $bg-size;
+            box-shadow: $box-shadow;
+            padding: $padding;
+        }
+    }
+}
+
+@mixin grid-content($break-point:$mobile, $display: null, $grid-temp-col:null, $grid-temp-rows: null, $grid-col-gap:null, $grid-row-gap:null){
+    @for $i from 0 to length($break-point){
+        @media(min-width: #{nth($break-point, $i+1)}){
+            display:$display;
+            grid-template-columns: $grid-temp-col;
+            grid-template-rows: $grid-temp-rows;
+            grid-column-gap: $grid-col-gap;
+            grid-row-gap: $grid-row-gap;
+        }
+    }
+}
+
+
+
+@mixin free-for-all-switch($break-point:$mobile, $letter-spacing: null, $line-height: null, $bg-size:null,$z-index:null, $content:null, $border-color: null,$fill:null,$opacity:null,$font-color:null, $font-size: null, $font-weight:null,$box-sizing: null,$cursor:null, $border-trr:null, $border-brr:null, $border-tlr:null, $border-blr:null, $bg:null,$box-shadow:null,$border:null,$web-apperance:null,$position:null,$inset:null,$text-align:null,$margin:null,$display:null, $justify-content: null, $align-items:null, $flex-direction:null, $height:null, $width:null, $min-height:null, $min-width:null, $max-height:null, $max-width:null, $border: null, $border-radius:null ){
+    @for $i from 0 to length($break-point){
+        @media(min-width: #{nth($break-point, $i + 1)}){
+            position: $position;
+            inset: $inset;
+            margin:$margin;
+            display: $display;
+            justify-content: $justify-content;
+            align-items: $align-items;
+            flex-direction: $flex-direction;
+            height: $height;
+            width: $width;
+            min-height: $min-height;
+            min-width: $min-width;
+            max-height: $max-height;
+            max-width:$max-width;
+            border: $border;
+            border-radius: $border-radius;
+            text-align: $text-align;
+            box-sizing:$box-sizing;
+            -webkit-apperance: $web-apperance;
+            box-shadow:$box-shadow;
+            background:$bg;
+            cursor:$cursor;
+            border-top-left-radius: $border-tlr;
+            border-bottom-left-radius: $border-blr;
+            border-top-right-radius: $border-trr;
+            border-bottom-right-radius: $border-brr;
+            content: $content;
+            font-weight: $font-weight;
+            font-size: $font-size;
+            opacity:$opacity;
+            fill: $fill;
+            background-size: $bg-size;
+            color: $font-color;
+            border-color: $border-color;
+            line-height: $line-height;
+            letter-spacing: $letter-spacing;
+        }
+    }
+}
+

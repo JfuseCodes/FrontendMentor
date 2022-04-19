@@ -1,0 +1,27 @@
+//font
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face{
+    font-family: 'Outfit', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+}
+$gen-font: 'Outfit', sans-serif;
+
+//color-theming
+$primary-bg-one: #1A2A33;
+$primary-bg-two: #1F3641; 
+$primary-bg-shadow: #10212A;
+//button colors
+$primary-button-one: #FFC860;
+$primary-button-one-active: #F2B137;
+$primary-button-one-shadow: #CC8B13;
+$primary-button-two:#65E9E4;
+$primary-button-two-active:#31C3BD;
+$primary-button-two-shadow: #118C87;
+$secondary-button-two: #D8E8ED;
+$secondary-button-two-active: #A8BFC9;
+$secondary-button-two-shadow: #6B8997;
+
+$mobile: 0;
+$tablet: 768px;
+$desktop: 1200px;

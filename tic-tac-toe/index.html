@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Styles/main.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Tic Tac Toe</title>
+</head>
+<body>
+  <main>
+    <section class="menu-container">
+      <div class="menu">
+        
+          <div class="logo-menu-container">
+            <img src="main/assets/logo.svg" alt="">
+          </div>
+
+
+          <div class="switch-container">
+            <div class="switch-container--heading">
+              <p>PICK PLAYER 1'S MARK</p>
+            </div>
+
+            <div>
+              <input type="checkbox">
+              <div class="switch-container--footer">
+                <p>REMEMBER : X GOES FIRST</p>
+              </div>
+            </div>
+          </div>
+        <div class="menu-button-container">
+          <button class="new-game cpu-btn">NEW GAME (VS CPU)</button>
+          <button class="new-game player-btn">NEW GAME (VS PLAYER)</button>
+        </div>
+      </div>
+    </section>
+      <section>
+
+        <div class="hidden">
+          <img src="main/assets/logo.svg" alt="">
+        </div>
+
+        <div class="turn-holder">
+        </div>
+      </section>
+
+      <section class="game-decision-section hidden">
+        <div class="game-decision-container">
+          <div class="text-container">
+            <div class="decision--outcome">
+              OH NO, YOU LOST...
+            </div>
+  
+            <div class="decision--player">
+              <span class="decision--marker-logo"><img src="main/assets/icon-o.svg"></span> TAKES THE ROUND
+            </div>
+  
+            <div class="decision--buttons">
+              <button class="hidden">QUIT</button>
+              <button class="hidden">NEXT ROUND</button>
+              <button class="hidden">NO, CANCEL</button>
+              <button class="hidden">YES, RESTART</button>
+            </div>
+          </div>
+        </div>
+      </section>
+  </main>
+
+<script src="app.js"></script>
+</body>
+</html>
