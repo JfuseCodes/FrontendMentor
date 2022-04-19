@@ -5,9 +5,9 @@ The classic tic tac toe game with scoring for users and ai.
 [App Demo](/)
 
 ## App Images
-![Design Preview 1](./design/desktop-tac-toe.jpg=1680*900)
+![Design Preview 1](./design/desktop-tac-toe.png=1680*900)
 
-![Design Preview 2](./design/mobile-tac-toe.jpg=375*667)
+![Design Preview 2](./design/mobile-tac-toe.png=375*667)
 
 
 ## My Process
