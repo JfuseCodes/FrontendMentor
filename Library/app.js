@@ -74,21 +74,22 @@ const toggleIcon = () => {
 toggleIcon();
 themeSwitch(icons);
 
+class Book {
+  constructor(name, author, numberOfPages, hasBeenRead){
+    this.name = name;
+    this.author = author;
+    this.numberOfPages = numberOfPages;
+    this.hasBeenRead = hasBeenRead;
+  }
+}
+
 let myLibrary = localStorage.getItem("myLibrary");
 const appStart = () => {
   if (!localStorage.getItem("myLibrary")) {
     myLibrary = [];
     localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
   } else displayExistingLibrary(existingLibrary);
-
 };
-
-function Book(name, author, numberOfPages, hasBeenRead) {
-  this.name = name;
-  this.author = author;
-  this.numberOfPages = numberOfPages;
-  this.hasBeenRead = hasBeenRead;
-}
 
 let existingLibrary = JSON.parse(localStorage.getItem("myLibrary"));
 
@@ -302,9 +303,6 @@ inputs.forEach((input) => {
   });
 });
 
-// console.log(form.childNodes[7].childNodes[3].childNodes[1]);
-// // let checkBox = form.childNodes[7].childNodes[3].childNodes[1];
-// console.log(checkBox);
 checkBox.addEventListener('click', e => {
   let newBook;
   let theBookName = bookNameInput.value,
